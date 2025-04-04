@@ -277,7 +277,7 @@ async function experimentInit() {
   endText = new visual.TextStim({
     win: psychoJS.window,
     name: 'endText',
-    text: 'Einde van het experiment.\n\nEen moment geduld a.u.b.: de antwoorden worden opgeslagen...',
+    text: 'Einde van het experiment.\n\nEen moment geduld a.u.b.\nDe antwoorden worden opgeslagen...',
     font: 'Arial',
     units: 'norm', 
     pos: [0, 0], draggable: false, height: 0.1,  wrapWidth: 1.8, ori: 0.0,
@@ -1464,7 +1464,7 @@ function endRoutineBegin(snapshot) {
     psychoJS._saveResults = 0;
     
     // Generate filename for results
-    let filename = psychoJS._experiment._experimentName + '_' + psychoJS._experiment._datetime + '.csv';
+    let filename = "participant " + expInfo["participant"] + "_" + psychoJS._experiment._experimentName + '_' + psychoJS._experiment._datetime + '.csv';
     
     // Extract data object from experiment
     let dataObj = psychoJS._experiment._trialsData;
