@@ -1462,7 +1462,7 @@ function endRoutineBegin(snapshot) {
     endMaxDurationReached = false;
     // update component parameters for each repeat
     // Disable downloading results to browser
-    psychoJs._saveResults = 0;
+    psychoJS._saveResults = 0;
     
     // Generate filename for results
     let filename = psychoJS._experiment._experimentName + '_' + psychoJS._experiment._datetime + '.csv';
