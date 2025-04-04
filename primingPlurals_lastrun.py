@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on April 03, 2025, at 15:01
+    on April 04, 2025, at 17:27
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -278,12 +278,6 @@ def setupDevices(expInfo, thisExp, win):
             deviceClass='keyboard',
             deviceName='breakKey',
         )
-    if deviceManager.getDevice('endKey') is None:
-        # initialise endKey
-        endKey = deviceManager.addDevice(
-            deviceClass='keyboard',
-            deviceName='endKey',
-        )
     # return True if completed successfully
     return True
 
@@ -402,7 +396,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         pos=(0, 0), draggable=False, height=0.1, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=0.0);
+        depth=-1.0);
     
     # --- Initialize components for Routine "primeStim" ---
     primeText = visual.TextStim(win=win, name='primeText',
@@ -432,7 +426,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         pos=(0, 0), draggable=False, height=0.1, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=0.0);
+        depth=-1.0);
     
     # --- Initialize components for Routine "targetStim" ---
     targetText = visual.TextStim(win=win, name='targetText',
@@ -472,7 +466,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         pos=(0, 0), draggable=False, height=0.1, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=0.0);
+        depth=-1.0);
     
     # --- Initialize components for Routine "primeStim" ---
     primeText = visual.TextStim(win=win, name='primeText',
@@ -491,7 +485,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         pos=(0, 0), draggable=False, height=0.1, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=0.0);
+        depth=-1.0);
     
     # --- Initialize components for Routine "targetStim" ---
     targetText = visual.TextStim(win=win, name='targetText',
@@ -521,13 +515,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "end" ---
     endText = visual.TextStim(win=win, name='endText',
-        text='Einde van het experiment\n\nBedankt voor het meedoen!\n\nDruk op spatiebalk om het experiment af te sluiten',
+        text='Einde van het experiment.\n\nEen moment geduld a.u.b.: de antwoorden worden opgeslagen...',
         font='Arial',
         units='norm', pos=(0, 0), draggable=False, height=0.1, wrapWidth=1.8, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
-    endKey = keyboard.Keyboard(deviceName='endKey')
     
     # create some handy timers
     
@@ -736,6 +729,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         fix.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
+        # Run 'Begin Routine' code from intervalCode
+        interval = (randint(0,700) + 300) / 1000
         fix_rand.setText('+')
         # store start times for fix
         fix.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
@@ -793,7 +788,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # if fix_rand is stopping this frame...
             if fix_rand.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > fix_rand.tStartRefresh + np.random.uniform(0, 0.7)+0.3-frameTolerance:
+                if tThisFlipGlobal > fix_rand.tStartRefresh + interval-frameTolerance:
                     # keep track of stop time/frame for later
                     fix_rand.tStop = t  # not accounting for scr refresh
                     fix_rand.tStopRefresh = tThisFlipGlobal  # on global time
@@ -1172,6 +1167,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         fix.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
+        # Run 'Begin Routine' code from intervalCode
+        interval = (randint(0,700) + 300) / 1000
         fix_rand.setText('+')
         # store start times for fix
         fix.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
@@ -1229,7 +1226,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # if fix_rand is stopping this frame...
             if fix_rand.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > fix_rand.tStartRefresh + np.random.uniform(0, 0.7)+0.3-frameTolerance:
+                if tThisFlipGlobal > fix_rand.tStartRefresh + interval-frameTolerance:
                     # keep track of stop time/frame for later
                     fix_rand.tStop = t  # not accounting for scr refresh
                     fix_rand.tStopRefresh = tThisFlipGlobal  # on global time
@@ -1785,6 +1782,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         fix.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
+        # Run 'Begin Routine' code from intervalCode
+        interval = (randint(0,700) + 300) / 1000
         fix_rand.setText('+')
         # store start times for fix
         fix.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
@@ -1842,7 +1841,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # if fix_rand is stopping this frame...
             if fix_rand.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > fix_rand.tStartRefresh + np.random.uniform(0, 0.7)+0.3-frameTolerance:
+                if tThisFlipGlobal > fix_rand.tStartRefresh + interval-frameTolerance:
                     # keep track of stop time/frame for later
                     fix_rand.tStop = t  # not accounting for scr refresh
                     fix_rand.tStopRefresh = tThisFlipGlobal  # on global time
@@ -2060,6 +2059,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         fix.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
+        # Run 'Begin Routine' code from intervalCode
+        interval = (randint(0,700) + 300) / 1000
         fix_rand.setText('+')
         # store start times for fix
         fix.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
@@ -2117,7 +2118,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # if fix_rand is stopping this frame...
             if fix_rand.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > fix_rand.tStartRefresh + np.random.uniform(0, 0.7)+0.3-frameTolerance:
+                if tThisFlipGlobal > fix_rand.tStartRefresh + interval-frameTolerance:
                     # keep track of stop time/frame for later
                     fix_rand.tStop = t  # not accounting for scr refresh
                     fix_rand.tStopRefresh = tThisFlipGlobal  # on global time
@@ -2485,15 +2486,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # create an object to store info about Routine end
     end = data.Routine(
         name='end',
-        components=[endText, endKey],
+        components=[endText],
     )
     end.status = NOT_STARTED
     continueRoutine = True
     # update component parameters for each repeat
-    # create starting attributes for endKey
-    endKey.keys = []
-    endKey.rt = []
-    _endKey_allKeys = []
     # store start times for end
     end.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
     end.tStart = globalClock.getTime(format='float')
@@ -2542,34 +2539,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # update params
             pass
         
-        # *endKey* updates
-        waitOnFlip = False
-        
-        # if endKey is starting this frame...
-        if endKey.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            endKey.frameNStart = frameN  # exact frame index
-            endKey.tStart = t  # local t and not account for scr refresh
-            endKey.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(endKey, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'endKey.started')
-            # update status
-            endKey.status = STARTED
-            # keyboard checking is just starting
-            waitOnFlip = True
-            win.callOnFlip(endKey.clock.reset)  # t=0 on next screen flip
-            win.callOnFlip(endKey.clearEvents, eventType='keyboard')  # clear events on next screen flip
-        if endKey.status == STARTED and not waitOnFlip:
-            theseKeys = endKey.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
-            _endKey_allKeys.extend(theseKeys)
-            if len(_endKey_allKeys):
-                endKey.keys = _endKey_allKeys[0].name  # just the first key pressed
-                endKey.rt = _endKey_allKeys[0].rt
-                endKey.duration = _endKey_allKeys[0].duration
-                # a response ends the routine
-                continueRoutine = False
-        
         # check for quit (typically the Esc key)
         if defaultKeyboard.getKeys(keyList=["escape"]):
             thisExp.status = FINISHED
@@ -2609,13 +2578,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     end.tStop = globalClock.getTime(format='float')
     end.tStopRefresh = tThisFlipGlobal
     thisExp.addData('end.stopped', end.tStop)
-    # check responses
-    if endKey.keys in ['', [], None]:  # No response was made
-        endKey.keys = None
-    thisExp.addData('endKey.keys',endKey.keys)
-    if endKey.keys != None:  # we had a response
-        thisExp.addData('endKey.rt', endKey.rt)
-        thisExp.addData('endKey.duration', endKey.duration)
     thisExp.nextEntry()
     # the Routine "end" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
