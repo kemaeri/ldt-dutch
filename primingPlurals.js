@@ -1464,7 +1464,7 @@ function endRoutineBegin(snapshot) {
     psychoJS._saveResults = 0;
     
     // Generate filename for results
-    let filename = "participant_" + expInfo["participant"] + "_list_" + expInfo["list_no"] + psychoJS._experiment._experimentName + '_' + psychoJS._experiment._datetime;
+    let filename = "list_" + expInfo["list_no"] + "_participant_" + expInfo["participant"] + psychoJS._experiment._experimentName + '_' + psychoJS._experiment._datetime;
     
     // Convert data object to JSON
     let dataJSON = JSON.stringify(psychoJS.experiment._trialsData);
