@@ -81,20 +81,6 @@
   </Settings>
   <Routines>
     <Routine name="welcome">
-      <ResourceManagerComponent name="resources" plugin="None">
-        <Param val="Start and Check" valType="str" updates="None" name="actionType"/>
-        <Param val="False" valType="bool" updates="None" name="checkAll"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="bool" updates="constant" name="forceEndRoutine"/>
-        <Param val="resources" valType="code" updates="None" name="name"/>
-        <Param val="['resources/list1.xlsx', 'resources/list2.xlsx', 'resources/list3.xlsx', 'resources/practice.xlsx']" valType="list" updates="constant" name="resources"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-      </ResourceManagerComponent>
       <RoutineSettingsComponent name="welcome" plugin="None">
         <Param val="none" valType="str" updates="None" name="backgroundFit"/>
         <Param val="" valType="str" updates="None" name="backgroundImg"/>
@@ -111,6 +97,20 @@
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
+      <ResourceManagerComponent name="resources" plugin="None">
+        <Param val="Start and Check" valType="str" updates="None" name="actionType"/>
+        <Param val="False" valType="bool" updates="None" name="checkAll"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="resources" valType="code" updates="None" name="name"/>
+        <Param val="['resources/list1.xlsx', 'resources/list2.xlsx', 'resources/list3.xlsx', 'resources/practice.xlsx']" valType="list" updates="constant" name="resources"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+      </ResourceManagerComponent>
       <TextComponent name="welcomeText" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -160,6 +160,22 @@
       </KeyboardComponent>
     </Routine>
     <Routine name="fix">
+      <RoutineSettingsComponent name="fix" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="fix" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
       <CodeComponent name="intervalCode" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
@@ -177,22 +193,6 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="intervalCode" valType="code" updates="None" name="name"/>
       </CodeComponent>
-      <RoutineSettingsComponent name="fix" plugin="None">
-        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
-        <Param val="" valType="str" updates="None" name="backgroundImg"/>
-        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
-        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
-        <Param val="" valType="str" updates="constant" name="desc"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
-        <Param val="fix" valType="code" updates="None" name="name"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="constant" name="skipIf"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
-      </RoutineSettingsComponent>
       <TextComponent name="fix_rand" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -561,6 +561,23 @@
       </KeyboardComponent>
     </Routine>
     <Routine name="end">
+      <CodeComponent name="codeEnd" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="// Disable downloading results to browser&amp;#10;psychoJS._saveResults = 0;&amp;#10;&amp;#10;// Generate filename for results&amp;#10;let filename = &quot;participant_&quot; + expInfo[&quot;participant&quot;] + &quot;_list_&quot; + expInfo[&quot;list&quot;] + psychoJS._experiment._experimentName + '_' + psychoJS._experiment._datetime + '.csv';&amp;#10;&amp;#10;// Extract data object from experiment&amp;#10;let dataObj = psychoJS._experiment._trialsData;&amp;#10;&amp;#10;// Convert data object to CSV&amp;#10;let data = [Object.keys(dataObj[0])].concat(dataObj).map(it =&gt; {&amp;#10;        return Object.values(it).toString()&amp;#10;    }).join('\n')&amp;#10;&amp;#10;// Send data to OSF via DataPipe&amp;#10;console.log('Saving data...');&amp;#10;fetch('https://pipe.jspsych.org/api/data', {&amp;#10;    method: &quot;POST&quot;,&amp;#10;    headers: {&amp;#10;        'Content-Type': 'application/json',&amp;#10;        Accept: &quot;*/*&quot;,&amp;#10;    },&amp;#10;    body: JSON.stringify({&amp;#10;        experimentID: 'ZEVejS01TpMw',&amp;#10;        filename: filename,&amp;#10;        data: data,&amp;#10;    }),&amp;#10;}).then(response =&gt; response.json()).then(data =&gt; {&amp;#10;    // Log response and force experiment end&amp;#10;    console.log(data);&amp;#10;    quitPsychoJS();&amp;#10;})&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="codeEnd" valType="code" updates="None" name="name"/>
+      </CodeComponent>
       <RoutineSettingsComponent name="end" plugin="None">
         <Param val="none" valType="str" updates="None" name="backgroundFit"/>
         <Param val="" valType="str" updates="None" name="backgroundImg"/>
@@ -604,23 +621,6 @@
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="1.8" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <CodeComponent name="code" plugin="None">
-        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="// Disable downloading results to browser&amp;#10;psychoJS._saveResults = 0;&amp;#10;&amp;#10;// Generate filename for results&amp;#10;let filename = &quot;participant &quot; + expInfo[&quot;participant&quot;] + &quot;_&quot; + psychoJS._experiment._experimentName + '_' + psychoJS._experiment._datetime + '.csv';&amp;#10;&amp;#10;// Extract data object from experiment&amp;#10;let dataObj = psychoJS._experiment._trialsData;&amp;#10;&amp;#10;// Convert data object to CSV&amp;#10;let data = [Object.keys(dataObj[0])].concat(dataObj).map(it =&gt; {&amp;#10;        return Object.values(it).toString()&amp;#10;    }).join('\n')&amp;#10;&amp;#10;// Send data to OSF via DataPipe&amp;#10;console.log('Saving data...');&amp;#10;fetch('https://pipe.jspsych.org/api/data', {&amp;#10;    method: &quot;POST&quot;,&amp;#10;    headers: {&amp;#10;        'Content-Type': 'application/json',&amp;#10;        Accept: &quot;*/*&quot;,&amp;#10;    },&amp;#10;    body: JSON.stringify({&amp;#10;        experimentID: 'ZEVejS01TpMw',&amp;#10;        filename: filename,&amp;#10;        data: data,&amp;#10;    }),&amp;#10;}).then(response =&gt; response.json()).then(data =&gt; {&amp;#10;    // Log response and force experiment end&amp;#10;    console.log(data);&amp;#10;    quitPsychoJS();&amp;#10;})&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="code" valType="code" updates="None" name="name"/>
-      </CodeComponent>
     </Routine>
   </Routines>
   <Flow>
