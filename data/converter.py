@@ -5,11 +5,11 @@ import glob
 def convertFile(json, csv):
   df = pd.read_json(json)
 
-  df.to_csv(csv)
+  df.to_csv(csv, index = False)
 
-  df = pd.read_csv(csv, usecols=["date","participant","group", "stimID","stimType","transparent", "idiom", "sentPos", "word","readingTimes","questionCorrect","participantAnswer","trial.started", "trial.stopped"])
+  df = pd.read_csv(csv,usecols=["list_no", "participant","date", "stimType", "stimID", "prime", "prime_lex", "prime_cond", "primeKey.corr", "primeKey.rt", "target", "target_lex", "target_cond", "targetKey.corr", "targetKey.rt"])
 
-  df = df[["participant","group","stimType","transparent","stimID", "idiom", "sentPos", "word","readingTimes","questionCorrect","participantAnswer","trial.started", "trial.stopped", "date"]]
+  df = df[["list_no", "participant","date", "stimType", "stimID", "prime", "prime_lex", "prime_cond", "primeKey.corr", "primeKey.rt", "target", "target_lex", "target_cond", "targetKey.corr", "targetKey.rt"]]
 
   df.to_csv(csv, index=False)
 
