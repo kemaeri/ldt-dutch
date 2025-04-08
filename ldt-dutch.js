@@ -87,6 +87,588 @@ psychoJS.start({
   resources: [
     // resources:
     {'name': 'resources/practice.xlsx', 'path': 'resources/practice.xlsx'},
+    {'name': 'resources/audio/aandacht.wav', 'path': 'resources/audio/aandacht.wav'},
+    {'name': 'resources/audio/aannoelen.wav', 'path': 'resources/audio/aannoelen.wav'},
+    {'name': 'resources/audio/aanpot.wav', 'path': 'resources/audio/aanpot.wav'},
+    {'name': 'resources/audio/aantal.wav', 'path': 'resources/audio/aantal.wav'},
+    {'name': 'resources/audio/aas.wav', 'path': 'resources/audio/aas.wav'},
+    {'name': 'resources/audio/acteurs.wav', 'path': 'resources/audio/acteurs.wav'},
+    {'name': 'resources/audio/acties.wav', 'path': 'resources/audio/acties.wav'},
+    {'name': 'resources/audio/adres.wav', 'path': 'resources/audio/adres.wav'},
+    {'name': 'resources/audio/adruis.wav', 'path': 'resources/audio/adruis.wav'},
+    {'name': 'resources/audio/afcert.wav', 'path': 'resources/audio/afcert.wav'},
+    {'name': 'resources/audio/afkol.wav', 'path': 'resources/audio/afkol.wav'},
+    {'name': 'resources/audio/afspraak.wav', 'path': 'resources/audio/afspraak.wav'},
+    {'name': 'resources/audio/afstand.wav', 'path': 'resources/audio/afstand.wav'},
+    {'name': 'resources/audio/afwas.wav', 'path': 'resources/audio/afwas.wav'},
+    {'name': 'resources/audio/afziep.wav', 'path': 'resources/audio/afziep.wav'},
+    {'name': 'resources/audio/alimd.wav', 'path': 'resources/audio/alimd.wav'},
+    {'name': 'resources/audio/amateurs.wav', 'path': 'resources/audio/amateurs.wav'},
+    {'name': 'resources/audio/antwoord.wav', 'path': 'resources/audio/antwoord.wav'},
+    {'name': 'resources/audio/appel.wav', 'path': 'resources/audio/appel.wav'},
+    {'name': 'resources/audio/applaus.wav', 'path': 'resources/audio/applaus.wav'},
+    {'name': 'resources/audio/arroest.wav', 'path': 'resources/audio/arroest.wav'},
+    {'name': 'resources/audio/arts.wav', 'path': 'resources/audio/arts.wav'},
+    {'name': 'resources/audio/auto.wav', 'path': 'resources/audio/auto.wav'},
+    {'name': 'resources/audio/baan.wav', 'path': 'resources/audio/baan.wav'},
+    {'name': 'resources/audio/baas.wav', 'path': 'resources/audio/baas.wav'},
+    {'name': 'resources/audio/baken.wav', 'path': 'resources/audio/baken.wav'},
+    {'name': 'resources/audio/ballen.wav', 'path': 'resources/audio/ballen.wav'},
+    {'name': 'resources/audio/bap.wav', 'path': 'resources/audio/bap.wav'},
+    {'name': 'resources/audio/bark.wav', 'path': 'resources/audio/bark.wav'},
+    {'name': 'resources/audio/bedwag.wav', 'path': 'resources/audio/bedwag.wav'},
+    {'name': 'resources/audio/beelden.wav', 'path': 'resources/audio/beelden.wav'},
+    {'name': 'resources/audio/beer.wav', 'path': 'resources/audio/beer.wav'},
+    {'name': 'resources/audio/begin.wav', 'path': 'resources/audio/begin.wav'},
+    {'name': 'resources/audio/bellers.wav', 'path': 'resources/audio/bellers.wav'},
+    {'name': 'resources/audio/bendes.wav', 'path': 'resources/audio/bendes.wav'},
+    {'name': 'resources/audio/benen.wav', 'path': 'resources/audio/benen.wav'},
+    {'name': 'resources/audio/berg.wav', 'path': 'resources/audio/berg.wav'},
+    {'name': 'resources/audio/bericht.wav', 'path': 'resources/audio/bericht.wav'},
+    {'name': 'resources/audio/beslond.wav', 'path': 'resources/audio/beslond.wav'},
+    {'name': 'resources/audio/bespeet.wav', 'path': 'resources/audio/bespeet.wav'},
+    {'name': 'resources/audio/beugels.wav', 'path': 'resources/audio/beugels.wav'},
+    {'name': 'resources/audio/beuten.wav', 'path': 'resources/audio/beuten.wav'},
+    {'name': 'resources/audio/bewijs.wav', 'path': 'resources/audio/bewijs.wav'},
+    {'name': 'resources/audio/bezems.wav', 'path': 'resources/audio/bezems.wav'},
+    {'name': 'resources/audio/bezit.wav', 'path': 'resources/audio/bezit.wav'},
+    {'name': 'resources/audio/bezoek.wav', 'path': 'resources/audio/bezoek.wav'},
+    {'name': 'resources/audio/biel.wav', 'path': 'resources/audio/biel.wav'},
+    {'name': 'resources/audio/biem.wav', 'path': 'resources/audio/biem.wav'},
+    {'name': 'resources/audio/biert.wav', 'path': 'resources/audio/biert.wav'},
+    {'name': 'resources/audio/blap.wav', 'path': 'resources/audio/blap.wav'},
+    {'name': 'resources/audio/blit.wav', 'path': 'resources/audio/blit.wav'},
+    {'name': 'resources/audio/bloemen.wav', 'path': 'resources/audio/bloemen.wav'},
+    {'name': 'resources/audio/blofuil.wav', 'path': 'resources/audio/blofuil.wav'},
+    {'name': 'resources/audio/blokken.wav', 'path': 'resources/audio/blokken.wav'},
+    {'name': 'resources/audio/boek.wav', 'path': 'resources/audio/boek.wav'},
+    {'name': 'resources/audio/boer.wav', 'path': 'resources/audio/boer.wav'},
+    {'name': 'resources/audio/bonus.wav', 'path': 'resources/audio/bonus.wav'},
+    {'name': 'resources/audio/bonzel.wav', 'path': 'resources/audio/bonzel.wav'},
+    {'name': 'resources/audio/boodschap.wav', 'path': 'resources/audio/boodschap.wav'},
+    {'name': 'resources/audio/boof.wav', 'path': 'resources/audio/boof.wav'},
+    {'name': 'resources/audio/bork.wav', 'path': 'resources/audio/bork.wav'},
+    {'name': 'resources/audio/brars.wav', 'path': 'resources/audio/brars.wav'},
+    {'name': 'resources/audio/bried.wav', 'path': 'resources/audio/bried.wav'},
+    {'name': 'resources/audio/bril.wav', 'path': 'resources/audio/bril.wav'},
+    {'name': 'resources/audio/broers.wav', 'path': 'resources/audio/broers.wav'},
+    {'name': 'resources/audio/brot.wav', 'path': 'resources/audio/brot.wav'},
+    {'name': 'resources/audio/bud.wav', 'path': 'resources/audio/bud.wav'},
+    {'name': 'resources/audio/bureau.wav', 'path': 'resources/audio/bureau.wav'},
+    {'name': 'resources/audio/burgers.wav', 'path': 'resources/audio/burgers.wav'},
+    {'name': 'resources/audio/cameras.wav', 'path': 'resources/audio/cameras.wav'},
+    {'name': 'resources/audio/centen.wav', 'path': 'resources/audio/centen.wav'},
+    {'name': 'resources/audio/christen.wav', 'path': 'resources/audio/christen.wav'},
+    {'name': 'resources/audio/cijfers.wav', 'path': 'resources/audio/cijfers.wav'},
+    {'name': 'resources/audio/cillen.wav', 'path': 'resources/audio/cillen.wav'},
+    {'name': 'resources/audio/circus.wav', 'path': 'resources/audio/circus.wav'},
+    {'name': 'resources/audio/collega.wav', 'path': 'resources/audio/collega.wav'},
+    {'name': 'resources/audio/culsuur.wav', 'path': 'resources/audio/culsuur.wav'},
+    {'name': 'resources/audio/cursus.wav', 'path': 'resources/audio/cursus.wav'},
+    {'name': 'resources/audio/cyclus.wav', 'path': 'resources/audio/cyclus.wav'},
+    {'name': 'resources/audio/daart.wav', 'path': 'resources/audio/daart.wav'},
+    {'name': 'resources/audio/daders.wav', 'path': 'resources/audio/daders.wav'},
+    {'name': 'resources/audio/dag.wav', 'path': 'resources/audio/dag.wav'},
+    {'name': 'resources/audio/dames.wav', 'path': 'resources/audio/dames.wav'},
+    {'name': 'resources/audio/dansa.wav', 'path': 'resources/audio/dansa.wav'},
+    {'name': 'resources/audio/dant.wav', 'path': 'resources/audio/dant.wav'},
+    {'name': 'resources/audio/dap.wav', 'path': 'resources/audio/dap.wav'},
+    {'name': 'resources/audio/dasten.wav', 'path': 'resources/audio/dasten.wav'},
+    {'name': 'resources/audio/degen.wav', 'path': 'resources/audio/degen.wav'},
+    {'name': 'resources/audio/deken.wav', 'path': 'resources/audio/deken.wav'},
+    {'name': 'resources/audio/demel.wav', 'path': 'resources/audio/demel.wav'},
+    {'name': 'resources/audio/dest.wav', 'path': 'resources/audio/dest.wav'},
+    {'name': 'resources/audio/deuren.wav', 'path': 'resources/audio/deuren.wav'},
+    {'name': 'resources/audio/didde.wav', 'path': 'resources/audio/didde.wav'},
+    {'name': 'resources/audio/diem.wav', 'path': 'resources/audio/diem.wav'},
+    {'name': 'resources/audio/dieren.wav', 'path': 'resources/audio/dieren.wav'},
+    {'name': 'resources/audio/dilder.wav', 'path': 'resources/audio/dilder.wav'},
+    {'name': 'resources/audio/dingen.wav', 'path': 'resources/audio/dingen.wav'},
+    {'name': 'resources/audio/dochters.wav', 'path': 'resources/audio/dochters.wav'},
+    {'name': 'resources/audio/doelen.wav', 'path': 'resources/audio/doelen.wav'},
+    {'name': 'resources/audio/doking.wav', 'path': 'resources/audio/doking.wav'},
+    {'name': 'resources/audio/dokters.wav', 'path': 'resources/audio/dokters.wav'},
+    {'name': 'resources/audio/dollars.wav', 'path': 'resources/audio/dollars.wav'},
+    {'name': 'resources/audio/dolmen.wav', 'path': 'resources/audio/dolmen.wav'},
+    {'name': 'resources/audio/donen.wav', 'path': 'resources/audio/donen.wav'},
+    {'name': 'resources/audio/donuts.wav', 'path': 'resources/audio/donuts.wav'},
+    {'name': 'resources/audio/dorpen.wav', 'path': 'resources/audio/dorpen.wav'},
+    {'name': 'resources/audio/dosis.wav', 'path': 'resources/audio/dosis.wav'},
+    {'name': 'resources/audio/dovaan.wav', 'path': 'resources/audio/dovaan.wav'},
+    {'name': 'resources/audio/draden.wav', 'path': 'resources/audio/draden.wav'},
+    {'name': 'resources/audio/dromen.wav', 'path': 'resources/audio/dromen.wav'},
+    {'name': 'resources/audio/drunk.wav', 'path': 'resources/audio/drunk.wav'},
+    {'name': 'resources/audio/duimen.wav', 'path': 'resources/audio/duimen.wav'},
+    {'name': 'resources/audio/duis.wav', 'path': 'resources/audio/duis.wav'},
+    {'name': 'resources/audio/dwee.wav', 'path': 'resources/audio/dwee.wav'},
+    {'name': 'resources/audio/eiland.wav', 'path': 'resources/audio/eiland.wav'},
+    {'name': 'resources/audio/examen.wav', 'path': 'resources/audio/examen.wav'},
+    {'name': 'resources/audio/excuus.wav', 'path': 'resources/audio/excuus.wav'},
+    {'name': 'resources/audio/ezels.wav', 'path': 'resources/audio/ezels.wav'},
+    {'name': 'resources/audio/feestje.wav', 'path': 'resources/audio/feestje.wav'},
+    {'name': 'resources/audio/feik.wav', 'path': 'resources/audio/feik.wav'},
+    {'name': 'resources/audio/figier.wav', 'path': 'resources/audio/figier.wav'},
+    {'name': 'resources/audio/films.wav', 'path': 'resources/audio/films.wav'},
+    {'name': 'resources/audio/fleusde.wav', 'path': 'resources/audio/fleusde.wav'},
+    {'name': 'resources/audio/fonds.wav', 'path': 'resources/audio/fonds.wav'},
+    {'name': 'resources/audio/foto.wav', 'path': 'resources/audio/foto.wav'},
+    {'name': 'resources/audio/fouten.wav', 'path': 'resources/audio/fouten.wav'},
+    {'name': 'resources/audio/fraat.wav', 'path': 'resources/audio/fraat.wav'},
+    {'name': 'resources/audio/frartoor.wav', 'path': 'resources/audio/frartoor.wav'},
+    {'name': 'resources/audio/frub.wav', 'path': 'resources/audio/frub.wav'},
+    {'name': 'resources/audio/furkel.wav', 'path': 'resources/audio/furkel.wav'},
+    {'name': 'resources/audio/gars.wav', 'path': 'resources/audio/gars.wav'},
+    {'name': 'resources/audio/gasten.wav', 'path': 'resources/audio/gasten.wav'},
+    {'name': 'resources/audio/gaten.wav', 'path': 'resources/audio/gaten.wav'},
+    {'name': 'resources/audio/gebied.wav', 'path': 'resources/audio/gebied.wav'},
+    {'name': 'resources/audio/gebouw.wav', 'path': 'resources/audio/gebouw.wav'},
+    {'name': 'resources/audio/gedocht.wav', 'path': 'resources/audio/gedocht.wav'},
+    {'name': 'resources/audio/gedoe.wav', 'path': 'resources/audio/gedoe.wav'},
+    {'name': 'resources/audio/gedrag.wav', 'path': 'resources/audio/gedrag.wav'},
+    {'name': 'resources/audio/geer.wav', 'path': 'resources/audio/geer.wav'},
+    {'name': 'resources/audio/gegeven.wav', 'path': 'resources/audio/gegeven.wav'},
+    {'name': 'resources/audio/geheugen.wav', 'path': 'resources/audio/geheugen.wav'},
+    {'name': 'resources/audio/geluid.wav', 'path': 'resources/audio/geluid.wav'},
+    {'name': 'resources/audio/gemacht.wav', 'path': 'resources/audio/gemacht.wav'},
+    {'name': 'resources/audio/genok.wav', 'path': 'resources/audio/genok.wav'},
+    {'name': 'resources/audio/gerillen.wav', 'path': 'resources/audio/gerillen.wav'},
+    {'name': 'resources/audio/gevaar.wav', 'path': 'resources/audio/gevaar.wav'},
+    {'name': 'resources/audio/gevage.wav', 'path': 'resources/audio/gevage.wav'},
+    {'name': 'resources/audio/gevoel.wav', 'path': 'resources/audio/gevoel.wav'},
+    {'name': 'resources/audio/gezicht.wav', 'path': 'resources/audio/gezicht.wav'},
+    {'name': 'resources/audio/gids.wav', 'path': 'resources/audio/gids.wav'},
+    {'name': 'resources/audio/gilier.wav', 'path': 'resources/audio/gilier.wav'},
+    {'name': 'resources/audio/glanding.wav', 'path': 'resources/audio/glanding.wav'},
+    {'name': 'resources/audio/glas.wav', 'path': 'resources/audio/glas.wav'},
+    {'name': 'resources/audio/glot.wav', 'path': 'resources/audio/glot.wav'},
+    {'name': 'resources/audio/gnole.wav', 'path': 'resources/audio/gnole.wav'},
+    {'name': 'resources/audio/gorannen.wav', 'path': 'resources/audio/gorannen.wav'},
+    {'name': 'resources/audio/gous.wav', 'path': 'resources/audio/gous.wav'},
+    {'name': 'resources/audio/graak.wav', 'path': 'resources/audio/graak.wav'},
+    {'name': 'resources/audio/grappen.wav', 'path': 'resources/audio/grappen.wav'},
+    {'name': 'resources/audio/groost.wav', 'path': 'resources/audio/groost.wav'},
+    {'name': 'resources/audio/grort.wav', 'path': 'resources/audio/grort.wav'},
+    {'name': 'resources/audio/guldel.wav', 'path': 'resources/audio/guldel.wav'},
+    {'name': 'resources/audio/hals.wav', 'path': 'resources/audio/hals.wav'},
+    {'name': 'resources/audio/handen.wav', 'path': 'resources/audio/handen.wav'},
+    {'name': 'resources/audio/harg.wav', 'path': 'resources/audio/harg.wav'},
+    {'name': 'resources/audio/harnas.wav', 'path': 'resources/audio/harnas.wav'},
+    {'name': 'resources/audio/hasten.wav', 'path': 'resources/audio/hasten.wav'},
+    {'name': 'resources/audio/haven.wav', 'path': 'resources/audio/haven.wav'},
+    {'name': 'resources/audio/hawel.wav', 'path': 'resources/audio/hawel.wav'},
+    {'name': 'resources/audio/hekte.wav', 'path': 'resources/audio/hekte.wav'},
+    {'name': 'resources/audio/helg.wav', 'path': 'resources/audio/helg.wav'},
+    {'name': 'resources/audio/helk.wav', 'path': 'resources/audio/helk.wav'},
+    {'name': 'resources/audio/hemel.wav', 'path': 'resources/audio/hemel.wav'},
+    {'name': 'resources/audio/hemmer.wav', 'path': 'resources/audio/hemmer.wav'},
+    {'name': 'resources/audio/heren.wav', 'path': 'resources/audio/heren.wav'},
+    {'name': 'resources/audio/herkoden.wav', 'path': 'resources/audio/herkoden.wav'},
+    {'name': 'resources/audio/heuk.wav', 'path': 'resources/audio/heuk.wav'},
+    {'name': 'resources/audio/heupen.wav', 'path': 'resources/audio/heupen.wav'},
+    {'name': 'resources/audio/heuvel.wav', 'path': 'resources/audio/heuvel.wav'},
+    {'name': 'resources/audio/hieden.wav', 'path': 'resources/audio/hieden.wav'},
+    {'name': 'resources/audio/hittel.wav', 'path': 'resources/audio/hittel.wav'},
+    {'name': 'resources/audio/hobbels.wav', 'path': 'resources/audio/hobbels.wav'},
+    {'name': 'resources/audio/honden.wav', 'path': 'resources/audio/honden.wav'},
+    {'name': 'resources/audio/hoods.wav', 'path': 'resources/audio/hoods.wav'},
+    {'name': 'resources/audio/hoofden.wav', 'path': 'resources/audio/hoofden.wav'},
+    {'name': 'resources/audio/hotels.wav', 'path': 'resources/audio/hotels.wav'},
+    {'name': 'resources/audio/hums.wav', 'path': 'resources/audio/hums.wav'},
+    {'name': 'resources/audio/hus.wav', 'path': 'resources/audio/hus.wav'},
+    {'name': 'resources/audio/idee.wav', 'path': 'resources/audio/idee.wav'},
+    {'name': 'resources/audio/ies.wav', 'path': 'resources/audio/ies.wav'},
+    {'name': 'resources/audio/indruk.wav', 'path': 'resources/audio/indruk.wav'},
+    {'name': 'resources/audio/inhochten.wav', 'path': 'resources/audio/inhochten.wav'},
+    {'name': 'resources/audio/insect.wav', 'path': 'resources/audio/insect.wav'},
+    {'name': 'resources/audio/intreek.wav', 'path': 'resources/audio/intreek.wav'},
+    {'name': 'resources/audio/invorn.wav', 'path': 'resources/audio/invorn.wav'},
+    {'name': 'resources/audio/inzweed.wav', 'path': 'resources/audio/inzweed.wav'},
+    {'name': 'resources/audio/jager.wav', 'path': 'resources/audio/jager.wav'},
+    {'name': 'resources/audio/jerken.wav', 'path': 'resources/audio/jerken.wav'},
+    {'name': 'resources/audio/jongen.wav', 'path': 'resources/audio/jongen.wav'},
+    {'name': 'resources/audio/kaars.wav', 'path': 'resources/audio/kaars.wav'},
+    {'name': 'resources/audio/kaarten.wav', 'path': 'resources/audio/kaarten.wav'},
+    {'name': 'resources/audio/kaas.wav', 'path': 'resources/audio/kaas.wav'},
+    {'name': 'resources/audio/kaden.wav', 'path': 'resources/audio/kaden.wav'},
+    {'name': 'resources/audio/kamers.wav', 'path': 'resources/audio/kamers.wav'},
+    {'name': 'resources/audio/kansen.wav', 'path': 'resources/audio/kansen.wav'},
+    {'name': 'resources/audio/kantoor.wav', 'path': 'resources/audio/kantoor.wav'},
+    {'name': 'resources/audio/kapie.wav', 'path': 'resources/audio/kapie.wav'},
+    {'name': 'resources/audio/kapsels.wav', 'path': 'resources/audio/kapsels.wav'},
+    {'name': 'resources/audio/karste.wav', 'path': 'resources/audio/karste.wav'},
+    {'name': 'resources/audio/kasteel.wav', 'path': 'resources/audio/kasteel.wav'},
+    {'name': 'resources/audio/katten.wav', 'path': 'resources/audio/katten.wav'},
+    {'name': 'resources/audio/keizer.wav', 'path': 'resources/audio/keizer.wav'},
+    {'name': 'resources/audio/kekst.wav', 'path': 'resources/audio/kekst.wav'},
+    {'name': 'resources/audio/kels.wav', 'path': 'resources/audio/kels.wav'},
+    {'name': 'resources/audio/kennis.wav', 'path': 'resources/audio/kennis.wav'},
+    {'name': 'resources/audio/kerels.wav', 'path': 'resources/audio/kerels.wav'},
+    {'name': 'resources/audio/kermis.wav', 'path': 'resources/audio/kermis.wav'},
+    {'name': 'resources/audio/keten.wav', 'path': 'resources/audio/keten.wav'},
+    {'name': 'resources/audio/keuken.wav', 'path': 'resources/audio/keuken.wav'},
+    {'name': 'resources/audio/keuzes.wav', 'path': 'resources/audio/keuzes.wav'},
+    {'name': 'resources/audio/kimpen.wav', 'path': 'resources/audio/kimpen.wav'},
+    {'name': 'resources/audio/kipt.wav', 'path': 'resources/audio/kipt.wav'},
+    {'name': 'resources/audio/klanten.wav', 'path': 'resources/audio/klanten.wav'},
+    {'name': 'resources/audio/kledeet.wav', 'path': 'resources/audio/kledeet.wav'},
+    {'name': 'resources/audio/klens.wav', 'path': 'resources/audio/klens.wav'},
+    {'name': 'resources/audio/kles.wav', 'path': 'resources/audio/kles.wav'},
+    {'name': 'resources/audio/kliep.wav', 'path': 'resources/audio/kliep.wav'},
+    {'name': 'resources/audio/klinkers.wav', 'path': 'resources/audio/klinkers.wav'},
+    {'name': 'resources/audio/kliteek.wav', 'path': 'resources/audio/kliteek.wav'},
+    {'name': 'resources/audio/kliter.wav', 'path': 'resources/audio/kliter.wav'},
+    {'name': 'resources/audio/klokken.wav', 'path': 'resources/audio/klokken.wav'},
+    {'name': 'resources/audio/kloosters.wav', 'path': 'resources/audio/kloosters.wav'},
+    {'name': 'resources/audio/kluis.wav', 'path': 'resources/audio/kluis.wav'},
+    {'name': 'resources/audio/klyppel.wav', 'path': 'resources/audio/klyppel.wav'},
+    {'name': 'resources/audio/knes.wav', 'path': 'resources/audio/knes.wav'},
+    {'name': 'resources/audio/knil.wav', 'path': 'resources/audio/knil.wav'},
+    {'name': 'resources/audio/knoer.wav', 'path': 'resources/audio/knoer.wav'},
+    {'name': 'resources/audio/knopen.wav', 'path': 'resources/audio/knopen.wav'},
+    {'name': 'resources/audio/knoppen.wav', 'path': 'resources/audio/knoppen.wav'},
+    {'name': 'resources/audio/kodaal.wav', 'path': 'resources/audio/kodaal.wav'},
+    {'name': 'resources/audio/koers.wav', 'path': 'resources/audio/koers.wav'},
+    {'name': 'resources/audio/koets.wav', 'path': 'resources/audio/koets.wav'},
+    {'name': 'resources/audio/koffer.wav', 'path': 'resources/audio/koffer.wav'},
+    {'name': 'resources/audio/komoet.wav', 'path': 'resources/audio/komoet.wav'},
+    {'name': 'resources/audio/kompas.wav', 'path': 'resources/audio/kompas.wav'},
+    {'name': 'resources/audio/koning.wav', 'path': 'resources/audio/koning.wav'},
+    {'name': 'resources/audio/koppen.wav', 'path': 'resources/audio/koppen.wav'},
+    {'name': 'resources/audio/kos.wav', 'path': 'resources/audio/kos.wav'},
+    {'name': 'resources/audio/kostuums.wav', 'path': 'resources/audio/kostuums.wav'},
+    {'name': 'resources/audio/kraad.wav', 'path': 'resources/audio/kraad.wav'},
+    {'name': 'resources/audio/krakin.wav', 'path': 'resources/audio/krakin.wav'},
+    {'name': 'resources/audio/kransing.wav', 'path': 'resources/audio/kransing.wav'},
+    {'name': 'resources/audio/kranten.wav', 'path': 'resources/audio/kranten.wav'},
+    {'name': 'resources/audio/kreukels.wav', 'path': 'resources/audio/kreukels.wav'},
+    {'name': 'resources/audio/krij.wav', 'path': 'resources/audio/krij.wav'},
+    {'name': 'resources/audio/krijgers.wav', 'path': 'resources/audio/krijgers.wav'},
+    {'name': 'resources/audio/krivieken.wav', 'path': 'resources/audio/krivieken.wav'},
+    {'name': 'resources/audio/krommel.wav', 'path': 'resources/audio/krommel.wav'},
+    {'name': 'resources/audio/krook.wav', 'path': 'resources/audio/krook.wav'},
+    {'name': 'resources/audio/kuiken.wav', 'path': 'resources/audio/kuiken.wav'},
+    {'name': 'resources/audio/kussen.wav', 'path': 'resources/audio/kussen.wav'},
+    {'name': 'resources/audio/ladders.wav', 'path': 'resources/audio/ladders.wav'},
+    {'name': 'resources/audio/laken.wav', 'path': 'resources/audio/laken.wav'},
+    {'name': 'resources/audio/lals.wav', 'path': 'resources/audio/lals.wav'},
+    {'name': 'resources/audio/landen.wav', 'path': 'resources/audio/landen.wav'},
+    {'name': 'resources/audio/lates.wav', 'path': 'resources/audio/lates.wav'},
+    {'name': 'resources/audio/laver.wav', 'path': 'resources/audio/laver.wav'},
+    {'name': 'resources/audio/leger.wav', 'path': 'resources/audio/leger.wav'},
+    {'name': 'resources/audio/leiders.wav', 'path': 'resources/audio/leiders.wav'},
+    {'name': 'resources/audio/leiding.wav', 'path': 'resources/audio/leiding.wav'},
+    {'name': 'resources/audio/letters.wav', 'path': 'resources/audio/letters.wav'},
+    {'name': 'resources/audio/leugen.wav', 'path': 'resources/audio/leugen.wav'},
+    {'name': 'resources/audio/leven.wav', 'path': 'resources/audio/leven.wav'},
+    {'name': 'resources/audio/lichten.wav', 'path': 'resources/audio/lichten.wav'},
+    {'name': 'resources/audio/liefde.wav', 'path': 'resources/audio/liefde.wav'},
+    {'name': 'resources/audio/lijf.wav', 'path': 'resources/audio/lijf.wav'},
+    {'name': 'resources/audio/lijnen.wav', 'path': 'resources/audio/lijnen.wav'},
+    {'name': 'resources/audio/lijzer.wav', 'path': 'resources/audio/lijzer.wav'},
+    {'name': 'resources/audio/lippen.wav', 'path': 'resources/audio/lippen.wav'},
+    {'name': 'resources/audio/loem.wav', 'path': 'resources/audio/loem.wav'},
+    {'name': 'resources/audio/longen.wav', 'path': 'resources/audio/longen.wav'},
+    {'name': 'resources/audio/loping.wav', 'path': 'resources/audio/loping.wav'},
+    {'name': 'resources/audio/lopmel.wav', 'path': 'resources/audio/lopmel.wav'},
+    {'name': 'resources/audio/lucifer.wav', 'path': 'resources/audio/lucifer.wav'},
+    {'name': 'resources/audio/lud.wav', 'path': 'resources/audio/lud.wav'},
+    {'name': 'resources/audio/maanden.wav', 'path': 'resources/audio/maanden.wav'},
+    {'name': 'resources/audio/mand.wav', 'path': 'resources/audio/mand.wav'},
+    {'name': 'resources/audio/mannen.wav', 'path': 'resources/audio/mannen.wav'},
+    {'name': 'resources/audio/manper.wav', 'path': 'resources/audio/manper.wav'},
+    {'name': 'resources/audio/mas.wav', 'path': 'resources/audio/mas.wav'},
+    {'name': 'resources/audio/maskers.wav', 'path': 'resources/audio/maskers.wav'},
+    {'name': 'resources/audio/matras.wav', 'path': 'resources/audio/matras.wav'},
+    {'name': 'resources/audio/meesters.wav', 'path': 'resources/audio/meesters.wav'},
+    {'name': 'resources/audio/meneer.wav', 'path': 'resources/audio/meneer.wav'},
+    {'name': 'resources/audio/mens.wav', 'path': 'resources/audio/mens.wav'},
+    {'name': 'resources/audio/mijnen.wav', 'path': 'resources/audio/mijnen.wav'},
+    {'name': 'resources/audio/mippen.wav', 'path': 'resources/audio/mippen.wav'},
+    {'name': 'resources/audio/mipper.wav', 'path': 'resources/audio/mipper.wav'},
+    {'name': 'resources/audio/missie.wav', 'path': 'resources/audio/missie.wav'},
+    {'name': 'resources/audio/moeders.wav', 'path': 'resources/audio/moeders.wav'},
+    {'name': 'resources/audio/moeite.wav', 'path': 'resources/audio/moeite.wav'},
+    {'name': 'resources/audio/moeras.wav', 'path': 'resources/audio/moeras.wav'},
+    {'name': 'resources/audio/molen.wav', 'path': 'resources/audio/molen.wav'},
+    {'name': 'resources/audio/moment.wav', 'path': 'resources/audio/moment.wav'},
+    {'name': 'resources/audio/monsters.wav', 'path': 'resources/audio/monsters.wav'},
+    {'name': 'resources/audio/motor.wav', 'path': 'resources/audio/motor.wav'},
+    {'name': 'resources/audio/motting.wav', 'path': 'resources/audio/motting.wav'},
+    {'name': 'resources/audio/mowool.wav', 'path': 'resources/audio/mowool.wav'},
+    {'name': 'resources/audio/muziek.wav', 'path': 'resources/audio/muziek.wav'},
+    {'name': 'resources/audio/naalden.wav', 'path': 'resources/audio/naalden.wav'},
+    {'name': 'resources/audio/nachten.wav', 'path': 'resources/audio/nachten.wav'},
+    {'name': 'resources/audio/nagels.wav', 'path': 'resources/audio/nagels.wav'},
+    {'name': 'resources/audio/nas.wav', 'path': 'resources/audio/nas.wav'},
+    {'name': 'resources/audio/navurf.wav', 'path': 'resources/audio/navurf.wav'},
+    {'name': 'resources/audio/negen.wav', 'path': 'resources/audio/negen.wav'},
+    {'name': 'resources/audio/nesten.wav', 'path': 'resources/audio/nesten.wav'},
+    {'name': 'resources/audio/neugd.wav', 'path': 'resources/audio/neugd.wav'},
+    {'name': 'resources/audio/nieuws.wav', 'path': 'resources/audio/nieuws.wav'},
+    {'name': 'resources/audio/nonnen.wav', 'path': 'resources/audio/nonnen.wav'},
+    {'name': 'resources/audio/noorden.wav', 'path': 'resources/audio/noorden.wav'},
+    {'name': 'resources/audio/nummers.wav', 'path': 'resources/audio/nummers.wav'},
+    {'name': 'resources/audio/nuur.wav', 'path': 'resources/audio/nuur.wav'},
+    {'name': 'resources/audio/ochtend.wav', 'path': 'resources/audio/ochtend.wav'},
+    {'name': 'resources/audio/oester.wav', 'path': 'resources/audio/oester.wav'},
+    {'name': 'resources/audio/ogen.wav', 'path': 'resources/audio/ogen.wav'},
+    {'name': 'resources/audio/ogjesk.wav', 'path': 'resources/audio/ogjesk.wav'},
+    {'name': 'resources/audio/olie.wav', 'path': 'resources/audio/olie.wav'},
+    {'name': 'resources/audio/ontbijt.wav', 'path': 'resources/audio/ontbijt.wav'},
+    {'name': 'resources/audio/ontzeps.wav', 'path': 'resources/audio/ontzeps.wav'},
+    {'name': 'resources/audio/onzin.wav', 'path': 'resources/audio/onzin.wav'},
+    {'name': 'resources/audio/oosten.wav', 'path': 'resources/audio/oosten.wav'},
+    {'name': 'resources/audio/oppas.wav', 'path': 'resources/audio/oppas.wav'},
+    {'name': 'resources/audio/opplad.wav', 'path': 'resources/audio/opplad.wav'},
+    {'name': 'resources/audio/optreden.wav', 'path': 'resources/audio/optreden.wav'},
+    {'name': 'resources/audio/orders.wav', 'path': 'resources/audio/orders.wav'},
+    {'name': 'resources/audio/orrijn.wav', 'path': 'resources/audio/orrijn.wav'},
+    {'name': 'resources/audio/ouders.wav', 'path': 'resources/audio/ouders.wav'},
+    {'name': 'resources/audio/oven.wav', 'path': 'resources/audio/oven.wav'},
+    {'name': 'resources/audio/paam.wav', 'path': 'resources/audio/paam.wav'},
+    {'name': 'resources/audio/padem.wav', 'path': 'resources/audio/padem.wav'},
+    {'name': 'resources/audio/paginas.wav', 'path': 'resources/audio/paginas.wav'},
+    {'name': 'resources/audio/paleis.wav', 'path': 'resources/audio/paleis.wav'},
+    {'name': 'resources/audio/pals.wav', 'path': 'resources/audio/pals.wav'},
+    {'name': 'resources/audio/paniek.wav', 'path': 'resources/audio/paniek.wav'},
+    {'name': 'resources/audio/pans.wav', 'path': 'resources/audio/pans.wav'},
+    {'name': 'resources/audio/papeur.wav', 'path': 'resources/audio/papeur.wav'},
+    {'name': 'resources/audio/parel.wav', 'path': 'resources/audio/parel.wav'},
+    {'name': 'resources/audio/partners.wav', 'path': 'resources/audio/partners.wav'},
+    {'name': 'resources/audio/pauze.wav', 'path': 'resources/audio/pauze.wav'},
+    {'name': 'resources/audio/pemmo.wav', 'path': 'resources/audio/pemmo.wav'},
+    {'name': 'resources/audio/pengel.wav', 'path': 'resources/audio/pengel.wav'},
+    {'name': 'resources/audio/penzing.wav', 'path': 'resources/audio/penzing.wav'},
+    {'name': 'resources/audio/persoon.wav', 'path': 'resources/audio/persoon.wav'},
+    {'name': 'resources/audio/pijl.wav', 'path': 'resources/audio/pijl.wav'},
+    {'name': 'resources/audio/pijver.wav', 'path': 'resources/audio/pijver.wav'},
+    {'name': 'resources/audio/pilijk.wav', 'path': 'resources/audio/pilijk.wav'},
+    {'name': 'resources/audio/pillen.wav', 'path': 'resources/audio/pillen.wav'},
+    {'name': 'resources/audio/pippen.wav', 'path': 'resources/audio/pippen.wav'},
+    {'name': 'resources/audio/plaatsen.wav', 'path': 'resources/audio/plaatsen.wav'},
+    {'name': 'resources/audio/planeet.wav', 'path': 'resources/audio/planeet.wav'},
+    {'name': 'resources/audio/plannen.wav', 'path': 'resources/audio/plannen.wav'},
+    {'name': 'resources/audio/planten.wav', 'path': 'resources/audio/planten.wav'},
+    {'name': 'resources/audio/plek.wav', 'path': 'resources/audio/plek.wav'},
+    {'name': 'resources/audio/pluchten.wav', 'path': 'resources/audio/pluchten.wav'},
+    {'name': 'resources/audio/politie.wav', 'path': 'resources/audio/politie.wav'},
+    {'name': 'resources/audio/pomt.wav', 'path': 'resources/audio/pomt.wav'},
+    {'name': 'resources/audio/poom.wav', 'path': 'resources/audio/poom.wav'},
+    {'name': 'resources/audio/porkoor.wav', 'path': 'resources/audio/porkoor.wav'},
+    {'name': 'resources/audio/pors.wav', 'path': 'resources/audio/pors.wav'},
+    {'name': 'resources/audio/posters.wav', 'path': 'resources/audio/posters.wav'},
+    {'name': 'resources/audio/prinses.wav', 'path': 'resources/audio/prinses.wav'},
+    {'name': 'resources/audio/problemen.wav', 'path': 'resources/audio/problemen.wav'},
+    {'name': 'resources/audio/procent.wav', 'path': 'resources/audio/procent.wav'},
+    {'name': 'resources/audio/projoet.wav', 'path': 'resources/audio/projoet.wav'},
+    {'name': 'resources/audio/prust.wav', 'path': 'resources/audio/prust.wav'},
+    {'name': 'resources/audio/punten.wav', 'path': 'resources/audio/punten.wav'},
+    {'name': 'resources/audio/ragding.wav', 'path': 'resources/audio/ragding.wav'},
+    {'name': 'resources/audio/ralor.wav', 'path': 'resources/audio/ralor.wav'},
+    {'name': 'resources/audio/raptart.wav', 'path': 'resources/audio/raptart.wav'},
+    {'name': 'resources/audio/rebby.wav', 'path': 'resources/audio/rebby.wav'},
+    {'name': 'resources/audio/rechters.wav', 'path': 'resources/audio/rechters.wav'},
+    {'name': 'resources/audio/reden.wav', 'path': 'resources/audio/reden.wav'},
+    {'name': 'resources/audio/reeks.wav', 'path': 'resources/audio/reeks.wav'},
+    {'name': 'resources/audio/reer.wav', 'path': 'resources/audio/reer.wav'},
+    {'name': 'resources/audio/regel.wav', 'path': 'resources/audio/regel.wav'},
+    {'name': 'resources/audio/regen.wav', 'path': 'resources/audio/regen.wav'},
+    {'name': 'resources/audio/rengen.wav', 'path': 'resources/audio/rengen.wav'},
+    {'name': 'resources/audio/res.wav', 'path': 'resources/audio/res.wav'},
+    {'name': 'resources/audio/respect.wav', 'path': 'resources/audio/respect.wav'},
+    {'name': 'resources/audio/rest.wav', 'path': 'resources/audio/rest.wav'},
+    {'name': 'resources/audio/ridder.wav', 'path': 'resources/audio/ridder.wav'},
+    {'name': 'resources/audio/ries.wav', 'path': 'resources/audio/ries.wav'},
+    {'name': 'resources/audio/rimpels.wav', 'path': 'resources/audio/rimpels.wav'},
+    {'name': 'resources/audio/ripge.wav', 'path': 'resources/audio/ripge.wav'},
+    {'name': 'resources/audio/risicos.wav', 'path': 'resources/audio/risicos.wav'},
+    {'name': 'resources/audio/robots.wav', 'path': 'resources/audio/robots.wav'},
+    {'name': 'resources/audio/roetter.wav', 'path': 'resources/audio/roetter.wav'},
+    {'name': 'resources/audio/roffen.wav', 'path': 'resources/audio/roffen.wav'},
+    {'name': 'resources/audio/rokers.wav', 'path': 'resources/audio/rokers.wav'},
+    {'name': 'resources/audio/roogsel.wav', 'path': 'resources/audio/roogsel.wav'},
+    {'name': 'resources/audio/rots.wav', 'path': 'resources/audio/rots.wav'},
+    {'name': 'resources/audio/scheegte.wav', 'path': 'resources/audio/scheegte.wav'},
+    {'name': 'resources/audio/schern.wav', 'path': 'resources/audio/schern.wav'},
+    {'name': 'resources/audio/schoenen.wav', 'path': 'resources/audio/schoenen.wav'},
+    {'name': 'resources/audio/schouders.wav', 'path': 'resources/audio/schouders.wav'},
+    {'name': 'resources/audio/schrijvers.wav', 'path': 'resources/audio/schrijvers.wav'},
+    {'name': 'resources/audio/schulling.wav', 'path': 'resources/audio/schulling.wav'},
+    {'name': 'resources/audio/schunder.wav', 'path': 'resources/audio/schunder.wav'},
+    {'name': 'resources/audio/sefhoren.wav', 'path': 'resources/audio/sefhoren.wav'},
+    {'name': 'resources/audio/seizoenen.wav', 'path': 'resources/audio/seizoenen.wav'},
+    {'name': 'resources/audio/sekken.wav', 'path': 'resources/audio/sekken.wav'},
+    {'name': 'resources/audio/sigier.wav', 'path': 'resources/audio/sigier.wav'},
+    {'name': 'resources/audio/sirenes.wav', 'path': 'resources/audio/sirenes.wav'},
+    {'name': 'resources/audio/slacond.wav', 'path': 'resources/audio/slacond.wav'},
+    {'name': 'resources/audio/slading.wav', 'path': 'resources/audio/slading.wav'},
+    {'name': 'resources/audio/slangen.wav', 'path': 'resources/audio/slangen.wav'},
+    {'name': 'resources/audio/slening.wav', 'path': 'resources/audio/slening.wav'},
+    {'name': 'resources/audio/sleutels.wav', 'path': 'resources/audio/sleutels.wav'},
+    {'name': 'resources/audio/slift.wav', 'path': 'resources/audio/slift.wav'},
+    {'name': 'resources/audio/slingers.wav', 'path': 'resources/audio/slingers.wav'},
+    {'name': 'resources/audio/smaan.wav', 'path': 'resources/audio/smaan.wav'},
+    {'name': 'resources/audio/smelk.wav', 'path': 'resources/audio/smelk.wav'},
+    {'name': 'resources/audio/smoed.wav', 'path': 'resources/audio/smoed.wav'},
+    {'name': 'resources/audio/smofes.wav', 'path': 'resources/audio/smofes.wav'},
+    {'name': 'resources/audio/sneef.wav', 'path': 'resources/audio/sneef.wav'},
+    {'name': 'resources/audio/sneppel.wav', 'path': 'resources/audio/sneppel.wav'},
+    {'name': 'resources/audio/snevel.wav', 'path': 'resources/audio/snevel.wav'},
+    {'name': 'resources/audio/sokken.wav', 'path': 'resources/audio/sokken.wav'},
+    {'name': 'resources/audio/soorten.wav', 'path': 'resources/audio/soorten.wav'},
+    {'name': 'resources/audio/spelers.wav', 'path': 'resources/audio/spelers.wav'},
+    {'name': 'resources/audio/spieren.wav', 'path': 'resources/audio/spieren.wav'},
+    {'name': 'resources/audio/spijkers.wav', 'path': 'resources/audio/spijkers.wav'},
+    {'name': 'resources/audio/spoer.wav', 'path': 'resources/audio/spoer.wav'},
+    {'name': 'resources/audio/spol.wav', 'path': 'resources/audio/spol.wav'},
+    {'name': 'resources/audio/spollen.wav', 'path': 'resources/audio/spollen.wav'},
+    {'name': 'resources/audio/sprading.wav', 'path': 'resources/audio/sprading.wav'},
+    {'name': 'resources/audio/stam.wav', 'path': 'resources/audio/stam.wav'},
+    {'name': 'resources/audio/stantte.wav', 'path': 'resources/audio/stantte.wav'},
+    {'name': 'resources/audio/stapels.wav', 'path': 'resources/audio/stapels.wav'},
+    {'name': 'resources/audio/stemmen.wav', 'path': 'resources/audio/stemmen.wav'},
+    {'name': 'resources/audio/stempels.wav', 'path': 'resources/audio/stempels.wav'},
+    {'name': 'resources/audio/stemte.wav', 'path': 'resources/audio/stemte.wav'},
+    {'name': 'resources/audio/ster.wav', 'path': 'resources/audio/ster.wav'},
+    {'name': 'resources/audio/steup.wav', 'path': 'resources/audio/steup.wav'},
+    {'name': 'resources/audio/stid.wav', 'path': 'resources/audio/stid.wav'},
+    {'name': 'resources/audio/stijp.wav', 'path': 'resources/audio/stijp.wav'},
+    {'name': 'resources/audio/stoffen.wav', 'path': 'resources/audio/stoffen.wav'},
+    {'name': 'resources/audio/storang.wav', 'path': 'resources/audio/storang.wav'},
+    {'name': 'resources/audio/storn.wav', 'path': 'resources/audio/storn.wav'},
+    {'name': 'resources/audio/strepen.wav', 'path': 'resources/audio/strepen.wav'},
+    {'name': 'resources/audio/strijders.wav', 'path': 'resources/audio/strijders.wav'},
+    {'name': 'resources/audio/stuin.wav', 'path': 'resources/audio/stuin.wav'},
+    {'name': 'resources/audio/stuk.wav', 'path': 'resources/audio/stuk.wav'},
+    {'name': 'resources/audio/stulee.wav', 'path': 'resources/audio/stulee.wav'},
+    {'name': 'resources/audio/succes.wav', 'path': 'resources/audio/succes.wav'},
+    {'name': 'resources/audio/systeem.wav', 'path': 'resources/audio/systeem.wav'},
+    {'name': 'resources/audio/talekt.wav', 'path': 'resources/audio/talekt.wav'},
+    {'name': 'resources/audio/tanden.wav', 'path': 'resources/audio/tanden.wav'},
+    {'name': 'resources/audio/tapeuk.wav', 'path': 'resources/audio/tapeuk.wav'},
+    {'name': 'resources/audio/tarm.wav', 'path': 'resources/audio/tarm.wav'},
+    {'name': 'resources/audio/tasen.wav', 'path': 'resources/audio/tasen.wav'},
+    {'name': 'resources/audio/tasteur.wav', 'path': 'resources/audio/tasteur.wav'},
+    {'name': 'resources/audio/tek.wav', 'path': 'resources/audio/tek.wav'},
+    {'name': 'resources/audio/teken.wav', 'path': 'resources/audio/teken.wav'},
+    {'name': 'resources/audio/tenkkiek.wav', 'path': 'resources/audio/tenkkiek.wav'},
+    {'name': 'resources/audio/tentamen.wav', 'path': 'resources/audio/tentamen.wav'},
+    {'name': 'resources/audio/terras.wav', 'path': 'resources/audio/terras.wav'},
+    {'name': 'resources/audio/tert.wav', 'path': 'resources/audio/tert.wav'},
+    {'name': 'resources/audio/tes.wav', 'path': 'resources/audio/tes.wav'},
+    {'name': 'resources/audio/tiek.wav', 'path': 'resources/audio/tiek.wav'},
+    {'name': 'resources/audio/tieners.wav', 'path': 'resources/audio/tieners.wav'},
+    {'name': 'resources/audio/tijn.wav', 'path': 'resources/audio/tijn.wav'},
+    {'name': 'resources/audio/tist.wav', 'path': 'resources/audio/tist.wav'},
+    {'name': 'resources/audio/toekomst.wav', 'path': 'resources/audio/toekomst.wav'},
+    {'name': 'resources/audio/toenacht.wav', 'path': 'resources/audio/toenacht.wav'},
+    {'name': 'resources/audio/toets.wav', 'path': 'resources/audio/toets.wav'},
+    {'name': 'resources/audio/tond.wav', 'path': 'resources/audio/tond.wav'},
+    {'name': 'resources/audio/toren.wav', 'path': 'resources/audio/toren.wav'},
+    {'name': 'resources/audio/traga.wav', 'path': 'resources/audio/traga.wav'},
+    {'name': 'resources/audio/trekkers.wav', 'path': 'resources/audio/trekkers.wav'},
+    {'name': 'resources/audio/trep.wav', 'path': 'resources/audio/trep.wav'},
+    {'name': 'resources/audio/troksem.wav', 'path': 'resources/audio/troksem.wav'},
+    {'name': 'resources/audio/tunnels.wav', 'path': 'resources/audio/tunnels.wav'},
+    {'name': 'resources/audio/twijfels.wav', 'path': 'resources/audio/twijfels.wav'},
+    {'name': 'resources/audio/types.wav', 'path': 'resources/audio/types.wav'},
+    {'name': 'resources/audio/vaast.wav', 'path': 'resources/audio/vaast.wav'},
+    {'name': 'resources/audio/varen.wav', 'path': 'resources/audio/varen.wav'},
+    {'name': 'resources/audio/varken.wav', 'path': 'resources/audio/varken.wav'},
+    {'name': 'resources/audio/vas.wav', 'path': 'resources/audio/vas.wav'},
+    {'name': 'resources/audio/velden.wav', 'path': 'resources/audio/velden.wav'},
+    {'name': 'resources/audio/verganden.wav', 'path': 'resources/audio/verganden.wav'},
+    {'name': 'resources/audio/verglad.wav', 'path': 'resources/audio/verglad.wav'},
+    {'name': 'resources/audio/verhaal.wav', 'path': 'resources/audio/verhaal.wav'},
+    {'name': 'resources/audio/verlaar.wav', 'path': 'resources/audio/verlaar.wav'},
+    {'name': 'resources/audio/verlies.wav', 'path': 'resources/audio/verlies.wav'},
+    {'name': 'resources/audio/vermoeden.wav', 'path': 'resources/audio/vermoeden.wav'},
+    {'name': 'resources/audio/vermogen.wav', 'path': 'resources/audio/vermogen.wav'},
+    {'name': 'resources/audio/verploef.wav', 'path': 'resources/audio/verploef.wav'},
+    {'name': 'resources/audio/verrier.wav', 'path': 'resources/audio/verrier.wav'},
+    {'name': 'resources/audio/verschil.wav', 'path': 'resources/audio/verschil.wav'},
+    {'name': 'resources/audio/verstand.wav', 'path': 'resources/audio/verstand.wav'},
+    {'name': 'resources/audio/vert.wav', 'path': 'resources/audio/vert.wav'},
+    {'name': 'resources/audio/vertrek.wav', 'path': 'resources/audio/vertrek.wav'},
+    {'name': 'resources/audio/vertrouwen.wav', 'path': 'resources/audio/vertrouwen.wav'},
+    {'name': 'resources/audio/verwij.wav', 'path': 'resources/audio/verwij.wav'},
+    {'name': 'resources/audio/verwoor.wav', 'path': 'resources/audio/verwoor.wav'},
+    {'name': 'resources/audio/verzet.wav', 'path': 'resources/audio/verzet.wav'},
+    {'name': 'resources/audio/veulen.wav', 'path': 'resources/audio/veulen.wav'},
+    {'name': 'resources/audio/vingers.wav', 'path': 'resources/audio/vingers.wav'},
+    {'name': 'resources/audio/vissen.wav', 'path': 'resources/audio/vissen.wav'},
+    {'name': 'resources/audio/vissers.wav', 'path': 'resources/audio/vissers.wav'},
+    {'name': 'resources/audio/vlammen.wav', 'path': 'resources/audio/vlammen.wav'},
+    {'name': 'resources/audio/vlekken.wav', 'path': 'resources/audio/vlekken.wav'},
+    {'name': 'resources/audio/vliegtuig.wav', 'path': 'resources/audio/vliegtuig.wav'},
+    {'name': 'resources/audio/vliffel.wav', 'path': 'resources/audio/vliffel.wav'},
+    {'name': 'resources/audio/vlinder.wav', 'path': 'resources/audio/vlinder.wav'},
+    {'name': 'resources/audio/voch.wav', 'path': 'resources/audio/voch.wav'},
+    {'name': 'resources/audio/vodef.wav', 'path': 'resources/audio/vodef.wav'},
+    {'name': 'resources/audio/voet.wav', 'path': 'resources/audio/voet.wav'},
+    {'name': 'resources/audio/vogels.wav', 'path': 'resources/audio/vogels.wav'},
+    {'name': 'resources/audio/volloe.wav', 'path': 'resources/audio/volloe.wav'},
+    {'name': 'resources/audio/vonnis.wav', 'path': 'resources/audio/vonnis.wav'},
+    {'name': 'resources/audio/voorgakt.wav', 'path': 'resources/audio/voorgakt.wav'},
+    {'name': 'resources/audio/voornemen.wav', 'path': 'resources/audio/voornemen.wav'},
+    {'name': 'resources/audio/voornerf.wav', 'path': 'resources/audio/voornerf.wav'},
+    {'name': 'resources/audio/voortiel.wav', 'path': 'resources/audio/voortiel.wav'},
+    {'name': 'resources/audio/vormen.wav', 'path': 'resources/audio/vormen.wav'},
+    {'name': 'resources/audio/vrede.wav', 'path': 'resources/audio/vrede.wav'},
+    {'name': 'resources/audio/vriend.wav', 'path': 'resources/audio/vriend.wav'},
+    {'name': 'resources/audio/vrouwen.wav', 'path': 'resources/audio/vrouwen.wav'},
+    {'name': 'resources/audio/vuilnis.wav', 'path': 'resources/audio/vuilnis.wav'},
+    {'name': 'resources/audio/vuut.wav', 'path': 'resources/audio/vuut.wav'},
+    {'name': 'resources/audio/waardes.wav', 'path': 'resources/audio/waardes.wav'},
+    {'name': 'resources/audio/waat.wav', 'path': 'resources/audio/waat.wav'},
+    {'name': 'resources/audio/wachters.wav', 'path': 'resources/audio/wachters.wav'},
+    {'name': 'resources/audio/wagen.wav', 'path': 'resources/audio/wagen.wav'},
+    {'name': 'resources/audio/walvis.wav', 'path': 'resources/audio/walvis.wav'},
+    {'name': 'resources/audio/wanst.wav', 'path': 'resources/audio/wanst.wav'},
+    {'name': 'resources/audio/wanveep.wav', 'path': 'resources/audio/wanveep.wav'},
+    {'name': 'resources/audio/wapen.wav', 'path': 'resources/audio/wapen.wav'},
+    {'name': 'resources/audio/weken.wav', 'path': 'resources/audio/weken.wav'},
+    {'name': 'resources/audio/wels.wav', 'path': 'resources/audio/wels.wav'},
+    {'name': 'resources/audio/wengen.wav', 'path': 'resources/audio/wengen.wav'},
+    {'name': 'resources/audio/wensen.wav', 'path': 'resources/audio/wensen.wav'},
+    {'name': 'resources/audio/wereld.wav', 'path': 'resources/audio/wereld.wav'},
+    {'name': 'resources/audio/westen.wav', 'path': 'resources/audio/westen.wav'},
+    {'name': 'resources/audio/wetten.wav', 'path': 'resources/audio/wetten.wav'},
+    {'name': 'resources/audio/wezen.wav', 'path': 'resources/audio/wezen.wav'},
+    {'name': 'resources/audio/wiel.wav', 'path': 'resources/audio/wiel.wav'},
+    {'name': 'resources/audio/wievel.wav', 'path': 'resources/audio/wievel.wav'},
+    {'name': 'resources/audio/winkels.wav', 'path': 'resources/audio/winkels.wav'},
+    {'name': 'resources/audio/winter.wav', 'path': 'resources/audio/winter.wav'},
+    {'name': 'resources/audio/wipsen.wav', 'path': 'resources/audio/wipsen.wav'},
+    {'name': 'resources/audio/wiro.wav', 'path': 'resources/audio/wiro.wav'},
+    {'name': 'resources/audio/woede.wav', 'path': 'resources/audio/woede.wav'},
+    {'name': 'resources/audio/wolken.wav', 'path': 'resources/audio/wolken.wav'},
+    {'name': 'resources/audio/womel.wav', 'path': 'resources/audio/womel.wav'},
+    {'name': 'resources/audio/wonden.wav', 'path': 'resources/audio/wonden.wav'},
+    {'name': 'resources/audio/wonder.wav', 'path': 'resources/audio/wonder.wav'},
+    {'name': 'resources/audio/woorden.wav', 'path': 'resources/audio/woorden.wav'},
+    {'name': 'resources/audio/wortels.wav', 'path': 'resources/audio/wortels.wav'},
+    {'name': 'resources/audio/wukker.wav', 'path': 'resources/audio/wukker.wav'},
+    {'name': 'resources/audio/zadels.wav', 'path': 'resources/audio/zadels.wav'},
+    {'name': 'resources/audio/zaken.wav', 'path': 'resources/audio/zaken.wav'},
+    {'name': 'resources/audio/zalder.wav', 'path': 'resources/audio/zalder.wav'},
+    {'name': 'resources/audio/zan.wav', 'path': 'resources/audio/zan.wav'},
+    {'name': 'resources/audio/zarder.wav', 'path': 'resources/audio/zarder.wav'},
+    {'name': 'resources/audio/zas.wav', 'path': 'resources/audio/zas.wav'},
+    {'name': 'resources/audio/zegen.wav', 'path': 'resources/audio/zegen.wav'},
+    {'name': 'resources/audio/zek.wav', 'path': 'resources/audio/zek.wav'},
+    {'name': 'resources/audio/zetver.wav', 'path': 'resources/audio/zetver.wav'},
+    {'name': 'resources/audio/zetzerken.wav', 'path': 'resources/audio/zetzerken.wav'},
+    {'name': 'resources/audio/ziektes.wav', 'path': 'resources/audio/ziektes.wav'},
+    {'name': 'resources/audio/zielen.wav', 'path': 'resources/audio/zielen.wav'},
+    {'name': 'resources/audio/zis.wav', 'path': 'resources/audio/zis.wav'},
+    {'name': 'resources/audio/zoe.wav', 'path': 'resources/audio/zoe.wav'},
+    {'name': 'resources/audio/zomers.wav', 'path': 'resources/audio/zomers.wav'},
+    {'name': 'resources/audio/zorgen.wav', 'path': 'resources/audio/zorgen.wav'},
+    {'name': 'resources/audio/zuiden.wav', 'path': 'resources/audio/zuiden.wav'},
+    {'name': 'resources/audio/zun.wav', 'path': 'resources/audio/zun.wav'},
+    {'name': 'resources/audio/zwaktes.wav', 'path': 'resources/audio/zwaktes.wav'},
+    {'name': 'resources/audio/zwervers.wav', 'path': 'resources/audio/zwervers.wav'},
   ]
 });
 
@@ -130,12 +712,14 @@ var welcomeKey;
 var fixClock;
 var fix_rand;
 var primeStimClock;
+var primeAudio;
 var primeText;
 var primeKey;
 var feedbackClock;
 var primed;
 var feedbackText;
 var targetStimClock;
+var targetAudio;
 var targetText;
 var targetKey;
 var startClock;
@@ -186,6 +770,12 @@ async function experimentInit() {
   
   // Initialize components for Routine "primeStim"
   primeStimClock = new util.Clock();
+  primeAudio = new sound.Sound({
+      win: psychoJS.window,
+      value: 'A',
+      secs: (- 1),
+      });
+  primeAudio.setVolume(1.0);
   primeText = new visual.TextStim({
     win: psychoJS.window,
     name: 'primeText',
@@ -195,7 +785,7 @@ async function experimentInit() {
     pos: [0, 0], draggable: false, height: 0.05,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
-    depth: 0.0 
+    depth: -1.0 
   });
   
   primeKey = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
@@ -219,6 +809,12 @@ async function experimentInit() {
   
   // Initialize components for Routine "targetStim"
   targetStimClock = new util.Clock();
+  targetAudio = new sound.Sound({
+      win: psychoJS.window,
+      value: 'A',
+      secs: 1.0,
+      });
+  targetAudio.setVolume(1.0);
   targetText = new visual.TextStim({
     win: psychoJS.window,
     name: 'targetText',
@@ -228,7 +824,7 @@ async function experimentInit() {
     pos: [0, 0], draggable: false, height: 0.05,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
-    depth: 0.0 
+    depth: -1.0 
   });
   
   targetKey = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
@@ -342,12 +938,12 @@ function welcomeRoutineEachFrame() {
     // start downloading resources specified by component resources
     if (t >= 0 && resources.status === PsychoJS.Status.NOT_STARTED) {
       console.log('register and start downloading resources specified by component resources');
-      await psychoJS.serverManager.prepareResources(["resources/list1.xlsx", "resources/list2.xlsx", "resources/list3.xlsx", "resources/practice.xlsx"]);
+      await psychoJS.serverManager.prepareResources(["resources/audio/aandacht.wav", "resources/audio/aannoelen.wav", "resources/audio/aanpot.wav", "resources/audio/aantal.wav", "resources/audio/aas.wav", "resources/audio/acteurs.wav", "resources/audio/acties.wav", "resources/audio/adres.wav", "resources/audio/adruis.wav", "resources/audio/afcert.wav", "resources/audio/afkol.wav", "resources/audio/afspraak.wav", "resources/audio/afstand.wav", "resources/audio/afwas.wav", "resources/audio/afziep.wav", "resources/audio/alimd.wav", "resources/audio/amateurs.wav", "resources/audio/antwoord.wav", "resources/audio/appel.wav", "resources/audio/applaus.wav", "resources/audio/arroest.wav", "resources/audio/arts.wav", "resources/audio/auto.wav", "resources/audio/baan.wav", "resources/audio/baas.wav", "resources/audio/baken.wav", "resources/audio/ballen.wav", "resources/audio/bap.wav", "resources/audio/bark.wav", "resources/audio/bedwag.wav", "resources/audio/beelden.wav", "resources/audio/beer.wav", "resources/audio/begin.wav", "resources/audio/bellers.wav", "resources/audio/bendes.wav", "resources/audio/benen.wav", "resources/audio/berg.wav", "resources/audio/bericht.wav", "resources/audio/beslond.wav", "resources/audio/bespeet.wav", "resources/audio/beugels.wav", "resources/audio/beuten.wav", "resources/audio/bewijs.wav", "resources/audio/bezems.wav", "resources/audio/bezit.wav", "resources/audio/bezoek.wav", "resources/audio/biel.wav", "resources/audio/biem.wav", "resources/audio/biert.wav", "resources/audio/blap.wav", "resources/audio/blit.wav", "resources/audio/bloemen.wav", "resources/audio/blofuil.wav", "resources/audio/blokken.wav", "resources/audio/boek.wav", "resources/audio/boer.wav", "resources/audio/bonus.wav", "resources/audio/bonzel.wav", "resources/audio/boodschap.wav", "resources/audio/boof.wav", "resources/audio/bork.wav", "resources/audio/brars.wav", "resources/audio/bried.wav", "resources/audio/bril.wav", "resources/audio/broers.wav", "resources/audio/brot.wav", "resources/audio/bud.wav", "resources/audio/bureau.wav", "resources/audio/burgers.wav", "resources/audio/cameras.wav", "resources/audio/centen.wav", "resources/audio/christen.wav", "resources/audio/cijfers.wav", "resources/audio/cillen.wav", "resources/audio/circus.wav", "resources/audio/collega.wav", "resources/audio/culsuur.wav", "resources/audio/cursus.wav", "resources/audio/cyclus.wav", "resources/audio/daart.wav", "resources/audio/daders.wav", "resources/audio/dag.wav", "resources/audio/dames.wav", "resources/audio/dansa.wav", "resources/audio/dant.wav", "resources/audio/dap.wav", "resources/audio/dasten.wav", "resources/audio/degen.wav", "resources/audio/deken.wav", "resources/audio/demel.wav", "resources/audio/dest.wav", "resources/audio/deuren.wav", "resources/audio/didde.wav", "resources/audio/diem.wav", "resources/audio/dieren.wav", "resources/audio/dilder.wav", "resources/audio/dingen.wav", "resources/audio/dochters.wav", "resources/audio/doelen.wav", "resources/audio/doking.wav", "resources/audio/dokters.wav", "resources/audio/dollars.wav", "resources/audio/dolmen.wav", "resources/audio/donen.wav", "resources/audio/donuts.wav", "resources/audio/dorpen.wav", "resources/audio/dosis.wav", "resources/audio/dovaan.wav", "resources/audio/draden.wav", "resources/audio/dromen.wav", "resources/audio/drunk.wav", "resources/audio/duimen.wav", "resources/audio/duis.wav", "resources/audio/dwee.wav", "resources/audio/eiland.wav", "resources/audio/examen.wav", "resources/audio/excuus.wav", "resources/audio/ezels.wav", "resources/audio/feestje.wav", "resources/audio/feik.wav", "resources/audio/figier.wav", "resources/audio/films.wav", "resources/audio/fleusde.wav", "resources/audio/fonds.wav", "resources/audio/foto.wav", "resources/audio/fouten.wav", "resources/audio/fraat.wav", "resources/audio/frartoor.wav", "resources/audio/frub.wav", "resources/audio/furkel.wav", "resources/audio/gars.wav", "resources/audio/gasten.wav", "resources/audio/gaten.wav", "resources/audio/gebied.wav", "resources/audio/gebouw.wav", "resources/audio/gedocht.wav", "resources/audio/gedoe.wav", "resources/audio/gedrag.wav", "resources/audio/geer.wav", "resources/audio/gegeven.wav", "resources/audio/geheugen.wav", "resources/audio/geluid.wav", "resources/audio/gemacht.wav", "resources/audio/genok.wav", "resources/audio/gerillen.wav", "resources/audio/gevaar.wav", "resources/audio/gevage.wav", "resources/audio/gevoel.wav", "resources/audio/gezicht.wav", "resources/audio/gids.wav", "resources/audio/gilier.wav", "resources/audio/glanding.wav", "resources/audio/glas.wav", "resources/audio/glot.wav", "resources/audio/gnole.wav", "resources/audio/gorannen.wav", "resources/audio/gous.wav", "resources/audio/graak.wav", "resources/audio/grappen.wav", "resources/audio/groost.wav", "resources/audio/grort.wav", "resources/audio/guldel.wav", "resources/audio/hals.wav", "resources/audio/handen.wav", "resources/audio/harg.wav", "resources/audio/harnas.wav", "resources/audio/hasten.wav", "resources/audio/haven.wav", "resources/audio/hawel.wav", "resources/audio/hekte.wav", "resources/audio/helg.wav", "resources/audio/helk.wav", "resources/audio/hemel.wav", "resources/audio/hemmer.wav", "resources/audio/heren.wav", "resources/audio/herkoden.wav", "resources/audio/heuk.wav", "resources/audio/heupen.wav", "resources/audio/heuvel.wav", "resources/audio/hieden.wav", "resources/audio/hittel.wav", "resources/audio/hobbels.wav", "resources/audio/honden.wav", "resources/audio/hoods.wav", "resources/audio/hoofden.wav", "resources/audio/hotels.wav", "resources/audio/hums.wav", "resources/audio/hus.wav", "resources/audio/idee.wav", "resources/audio/ies.wav", "resources/audio/indruk.wav", "resources/audio/inhochten.wav", "resources/audio/insect.wav", "resources/audio/intreek.wav", "resources/audio/invorn.wav", "resources/audio/inzweed.wav", "resources/audio/jager.wav", "resources/audio/jerken.wav", "resources/audio/jongen.wav", "resources/audio/kaars.wav", "resources/audio/kaarten.wav", "resources/audio/kaas.wav", "resources/audio/kaden.wav", "resources/audio/kamers.wav", "resources/audio/kansen.wav", "resources/audio/kantoor.wav", "resources/audio/kapie.wav", "resources/audio/kapsels.wav", "resources/audio/karste.wav", "resources/audio/kasteel.wav", "resources/audio/katten.wav", "resources/audio/keizer.wav", "resources/audio/kekst.wav", "resources/audio/kels.wav", "resources/audio/kennis.wav", "resources/audio/kerels.wav", "resources/audio/kermis.wav", "resources/audio/keten.wav", "resources/audio/keuken.wav", "resources/audio/keuzes.wav", "resources/audio/kimpen.wav", "resources/audio/kipt.wav", "resources/audio/klanten.wav", "resources/audio/kledeet.wav", "resources/audio/klens.wav", "resources/audio/kles.wav", "resources/audio/kliep.wav", "resources/audio/klinkers.wav", "resources/audio/kliteek.wav", "resources/audio/kliter.wav", "resources/audio/klokken.wav", "resources/audio/kloosters.wav", "resources/audio/kluis.wav", "resources/audio/klyppel.wav", "resources/audio/knes.wav", "resources/audio/knil.wav", "resources/audio/knoer.wav", "resources/audio/knopen.wav", "resources/audio/knoppen.wav", "resources/audio/kodaal.wav", "resources/audio/koers.wav", "resources/audio/koets.wav", "resources/audio/koffer.wav", "resources/audio/komoet.wav", "resources/audio/kompas.wav", "resources/audio/koning.wav", "resources/audio/koppen.wav", "resources/audio/kos.wav", "resources/audio/kostuums.wav", "resources/audio/kraad.wav", "resources/audio/krakin.wav", "resources/audio/kransing.wav", "resources/audio/kranten.wav", "resources/audio/kreukels.wav", "resources/audio/krij.wav", "resources/audio/krijgers.wav", "resources/audio/krivieken.wav", "resources/audio/krommel.wav", "resources/audio/krook.wav", "resources/audio/kuiken.wav", "resources/audio/kussen.wav", "resources/audio/ladders.wav", "resources/audio/laken.wav", "resources/audio/lals.wav", "resources/audio/landen.wav", "resources/audio/lates.wav", "resources/audio/laver.wav", "resources/audio/leger.wav", "resources/audio/leiders.wav", "resources/audio/leiding.wav", "resources/audio/letters.wav", "resources/audio/leugen.wav", "resources/audio/leven.wav", "resources/audio/lichten.wav", "resources/audio/liefde.wav", "resources/audio/lijf.wav", "resources/audio/lijnen.wav", "resources/audio/lijzer.wav", "resources/audio/lippen.wav", "resources/audio/loem.wav", "resources/audio/longen.wav", "resources/audio/loping.wav", "resources/audio/lopmel.wav", "resources/audio/lucifer.wav", "resources/audio/lud.wav", "resources/audio/maanden.wav", "resources/audio/mand.wav", "resources/audio/mannen.wav", "resources/audio/manper.wav", "resources/audio/mas.wav", "resources/audio/maskers.wav", "resources/audio/matras.wav", "resources/audio/meesters.wav", "resources/audio/meneer.wav", "resources/audio/mens.wav", "resources/audio/mijnen.wav", "resources/audio/mippen.wav", "resources/audio/mipper.wav", "resources/audio/missie.wav", "resources/audio/moeders.wav", "resources/audio/moeite.wav", "resources/audio/moeras.wav", "resources/audio/molen.wav", "resources/audio/moment.wav", "resources/audio/monsters.wav", "resources/audio/motor.wav", "resources/audio/motting.wav", "resources/audio/mowool.wav", "resources/audio/muziek.wav", "resources/audio/naalden.wav", "resources/audio/nachten.wav", "resources/audio/nagels.wav", "resources/audio/nas.wav", "resources/audio/navurf.wav", "resources/audio/negen.wav", "resources/audio/nesten.wav", "resources/audio/neugd.wav", "resources/audio/nieuws.wav", "resources/audio/nonnen.wav", "resources/audio/noorden.wav", "resources/audio/nummers.wav", "resources/audio/nuur.wav", "resources/audio/ochtend.wav", "resources/audio/oester.wav", "resources/audio/ogen.wav", "resources/audio/ogjesk.wav", "resources/audio/olie.wav", "resources/audio/ontbijt.wav", "resources/audio/ontzeps.wav", "resources/audio/onzin.wav", "resources/audio/oosten.wav", "resources/audio/oppas.wav", "resources/audio/opplad.wav", "resources/audio/optreden.wav", "resources/audio/orders.wav", "resources/audio/orrijn.wav", "resources/audio/ouders.wav", "resources/audio/oven.wav", "resources/audio/paam.wav", "resources/audio/padem.wav", "resources/audio/paginas.wav", "resources/audio/paleis.wav", "resources/audio/pals.wav", "resources/audio/paniek.wav", "resources/audio/pans.wav", "resources/audio/papeur.wav", "resources/audio/parel.wav", "resources/audio/partners.wav", "resources/audio/pauze.wav", "resources/audio/pemmo.wav", "resources/audio/pengel.wav", "resources/audio/penzing.wav", "resources/audio/persoon.wav", "resources/audio/pijl.wav", "resources/audio/pijver.wav", "resources/audio/pilijk.wav", "resources/audio/pillen.wav", "resources/audio/pippen.wav", "resources/audio/plaatsen.wav", "resources/audio/planeet.wav", "resources/audio/plannen.wav", "resources/audio/planten.wav", "resources/audio/plek.wav", "resources/audio/pluchten.wav", "resources/audio/politie.wav", "resources/audio/pomt.wav", "resources/audio/poom.wav", "resources/audio/porkoor.wav", "resources/audio/pors.wav", "resources/audio/posters.wav", "resources/audio/prinses.wav", "resources/audio/problemen.wav", "resources/audio/procent.wav", "resources/audio/projoet.wav", "resources/audio/prust.wav", "resources/audio/punten.wav", "resources/audio/ragding.wav", "resources/audio/ralor.wav", "resources/audio/raptart.wav", "resources/audio/rebby.wav", "resources/audio/rechters.wav", "resources/audio/reden.wav", "resources/audio/reeks.wav", "resources/audio/reer.wav", "resources/audio/regel.wav", "resources/audio/regen.wav", "resources/audio/rengen.wav", "resources/audio/res.wav", "resources/audio/respect.wav", "resources/audio/rest.wav", "resources/audio/ridder.wav", "resources/audio/ries.wav", "resources/audio/rimpels.wav", "resources/audio/ripge.wav", "resources/audio/risicos.wav", "resources/audio/robots.wav", "resources/audio/roetter.wav", "resources/audio/roffen.wav", "resources/audio/rokers.wav", "resources/audio/roogsel.wav", "resources/audio/rots.wav", "resources/audio/scheegte.wav", "resources/audio/schern.wav", "resources/audio/schoenen.wav", "resources/audio/schouders.wav", "resources/audio/schrijvers.wav", "resources/audio/schulling.wav", "resources/audio/schunder.wav", "resources/audio/sefhoren.wav", "resources/audio/seizoenen.wav", "resources/audio/sekken.wav", "resources/audio/sigier.wav", "resources/audio/sirenes.wav", "resources/audio/slacond.wav", "resources/audio/slading.wav", "resources/audio/slangen.wav", "resources/audio/slening.wav", "resources/audio/sleutels.wav", "resources/audio/slift.wav", "resources/audio/slingers.wav", "resources/audio/smaan.wav", "resources/audio/smelk.wav", "resources/audio/smoed.wav", "resources/audio/smofes.wav", "resources/audio/sneef.wav", "resources/audio/sneppel.wav", "resources/audio/snevel.wav", "resources/audio/sokken.wav", "resources/audio/soorten.wav", "resources/audio/spelers.wav", "resources/audio/spieren.wav", "resources/audio/spijkers.wav", "resources/audio/spoer.wav", "resources/audio/spol.wav", "resources/audio/spollen.wav", "resources/audio/sprading.wav", "resources/audio/stam.wav", "resources/audio/stantte.wav", "resources/audio/stapels.wav", "resources/audio/stemmen.wav", "resources/audio/stempels.wav", "resources/audio/stemte.wav", "resources/audio/ster.wav", "resources/audio/steup.wav", "resources/audio/stid.wav", "resources/audio/stijp.wav", "resources/audio/stoffen.wav", "resources/audio/storang.wav", "resources/audio/storn.wav", "resources/audio/strepen.wav", "resources/audio/strijders.wav", "resources/audio/stuin.wav", "resources/audio/stuk.wav", "resources/audio/stulee.wav", "resources/audio/succes.wav", "resources/audio/systeem.wav", "resources/audio/talekt.wav", "resources/audio/tanden.wav", "resources/audio/tapeuk.wav", "resources/audio/tarm.wav", "resources/audio/tasen.wav", "resources/audio/tasteur.wav", "resources/audio/tek.wav", "resources/audio/teken.wav", "resources/audio/tenkkiek.wav", "resources/audio/tentamen.wav", "resources/audio/terras.wav", "resources/audio/tert.wav", "resources/audio/tes.wav", "resources/audio/tiek.wav", "resources/audio/tieners.wav", "resources/audio/tijn.wav", "resources/audio/tist.wav", "resources/audio/toekomst.wav", "resources/audio/toenacht.wav", "resources/audio/toets.wav", "resources/audio/tond.wav", "resources/audio/toren.wav", "resources/audio/traga.wav", "resources/audio/trekkers.wav", "resources/audio/trep.wav", "resources/audio/troksem.wav", "resources/audio/tunnels.wav", "resources/audio/twijfels.wav", "resources/audio/types.wav", "resources/audio/vaast.wav", "resources/audio/varen.wav", "resources/audio/varken.wav", "resources/audio/vas.wav", "resources/audio/velden.wav", "resources/audio/verganden.wav", "resources/audio/verglad.wav", "resources/audio/verhaal.wav", "resources/audio/verlaar.wav", "resources/audio/verlies.wav", "resources/audio/vermoeden.wav", "resources/audio/vermogen.wav", "resources/audio/verploef.wav", "resources/audio/verrier.wav", "resources/audio/verschil.wav", "resources/audio/verstand.wav", "resources/audio/vert.wav", "resources/audio/vertrek.wav", "resources/audio/vertrouwen.wav", "resources/audio/verwij.wav", "resources/audio/verwoor.wav", "resources/audio/verzet.wav", "resources/audio/veulen.wav", "resources/audio/vingers.wav", "resources/audio/vissen.wav", "resources/audio/vissers.wav", "resources/audio/vlammen.wav", "resources/audio/vlekken.wav", "resources/audio/vliegtuig.wav", "resources/audio/vliffel.wav", "resources/audio/vlinder.wav", "resources/audio/voch.wav", "resources/audio/vodef.wav", "resources/audio/voet.wav", "resources/audio/vogels.wav", "resources/audio/volloe.wav", "resources/audio/vonnis.wav", "resources/audio/voorgakt.wav", "resources/audio/voornemen.wav", "resources/audio/voornerf.wav", "resources/audio/voortiel.wav", "resources/audio/vormen.wav", "resources/audio/vrede.wav", "resources/audio/vriend.wav", "resources/audio/vrouwen.wav", "resources/audio/vuilnis.wav", "resources/audio/vuut.wav", "resources/audio/waardes.wav", "resources/audio/waat.wav", "resources/audio/wachters.wav", "resources/audio/wagen.wav", "resources/audio/walvis.wav", "resources/audio/wanst.wav", "resources/audio/wanveep.wav", "resources/audio/wapen.wav", "resources/audio/weken.wav", "resources/audio/wels.wav", "resources/audio/wengen.wav", "resources/audio/wensen.wav", "resources/audio/wereld.wav", "resources/audio/westen.wav", "resources/audio/wetten.wav", "resources/audio/wezen.wav", "resources/audio/wiel.wav", "resources/audio/wievel.wav", "resources/audio/winkels.wav", "resources/audio/winter.wav", "resources/audio/wipsen.wav", "resources/audio/wiro.wav", "resources/audio/woede.wav", "resources/audio/wolken.wav", "resources/audio/womel.wav", "resources/audio/wonden.wav", "resources/audio/wonder.wav", "resources/audio/woorden.wav", "resources/audio/wortels.wav", "resources/audio/wukker.wav", "resources/audio/zadels.wav", "resources/audio/zaken.wav", "resources/audio/zalder.wav", "resources/audio/zan.wav", "resources/audio/zarder.wav", "resources/audio/zas.wav", "resources/audio/zegen.wav", "resources/audio/zek.wav", "resources/audio/zetver.wav", "resources/audio/zetzerken.wav", "resources/audio/ziektes.wav", "resources/audio/zielen.wav", "resources/audio/zis.wav", "resources/audio/zoe.wav", "resources/audio/zomers.wav", "resources/audio/zorgen.wav", "resources/audio/zuiden.wav", "resources/audio/zun.wav", "resources/audio/zwaktes.wav", "resources/audio/zwervers.wav", "resources/list1.xlsx", "resources/list2.xlsx", "resources/list3.xlsx", "resources/practice.xlsx"]);
       resources.status = PsychoJS.Status.STARTED;
     }
     // check on the resources specified by component resources
     if (t >= null && resources.status === PsychoJS.Status.STARTED) {
-      if (psychoJS.serverManager.getResourceStatus(["resources/list1.xlsx", "resources/list2.xlsx", "resources/list3.xlsx", "resources/practice.xlsx"]) === core.ServerManager.ResourceStatus.DOWNLOADED) {
+      if (psychoJS.serverManager.getResourceStatus(["resources/audio/aandacht.wav", "resources/audio/aannoelen.wav", "resources/audio/aanpot.wav", "resources/audio/aantal.wav", "resources/audio/aas.wav", "resources/audio/acteurs.wav", "resources/audio/acties.wav", "resources/audio/adres.wav", "resources/audio/adruis.wav", "resources/audio/afcert.wav", "resources/audio/afkol.wav", "resources/audio/afspraak.wav", "resources/audio/afstand.wav", "resources/audio/afwas.wav", "resources/audio/afziep.wav", "resources/audio/alimd.wav", "resources/audio/amateurs.wav", "resources/audio/antwoord.wav", "resources/audio/appel.wav", "resources/audio/applaus.wav", "resources/audio/arroest.wav", "resources/audio/arts.wav", "resources/audio/auto.wav", "resources/audio/baan.wav", "resources/audio/baas.wav", "resources/audio/baken.wav", "resources/audio/ballen.wav", "resources/audio/bap.wav", "resources/audio/bark.wav", "resources/audio/bedwag.wav", "resources/audio/beelden.wav", "resources/audio/beer.wav", "resources/audio/begin.wav", "resources/audio/bellers.wav", "resources/audio/bendes.wav", "resources/audio/benen.wav", "resources/audio/berg.wav", "resources/audio/bericht.wav", "resources/audio/beslond.wav", "resources/audio/bespeet.wav", "resources/audio/beugels.wav", "resources/audio/beuten.wav", "resources/audio/bewijs.wav", "resources/audio/bezems.wav", "resources/audio/bezit.wav", "resources/audio/bezoek.wav", "resources/audio/biel.wav", "resources/audio/biem.wav", "resources/audio/biert.wav", "resources/audio/blap.wav", "resources/audio/blit.wav", "resources/audio/bloemen.wav", "resources/audio/blofuil.wav", "resources/audio/blokken.wav", "resources/audio/boek.wav", "resources/audio/boer.wav", "resources/audio/bonus.wav", "resources/audio/bonzel.wav", "resources/audio/boodschap.wav", "resources/audio/boof.wav", "resources/audio/bork.wav", "resources/audio/brars.wav", "resources/audio/bried.wav", "resources/audio/bril.wav", "resources/audio/broers.wav", "resources/audio/brot.wav", "resources/audio/bud.wav", "resources/audio/bureau.wav", "resources/audio/burgers.wav", "resources/audio/cameras.wav", "resources/audio/centen.wav", "resources/audio/christen.wav", "resources/audio/cijfers.wav", "resources/audio/cillen.wav", "resources/audio/circus.wav", "resources/audio/collega.wav", "resources/audio/culsuur.wav", "resources/audio/cursus.wav", "resources/audio/cyclus.wav", "resources/audio/daart.wav", "resources/audio/daders.wav", "resources/audio/dag.wav", "resources/audio/dames.wav", "resources/audio/dansa.wav", "resources/audio/dant.wav", "resources/audio/dap.wav", "resources/audio/dasten.wav", "resources/audio/degen.wav", "resources/audio/deken.wav", "resources/audio/demel.wav", "resources/audio/dest.wav", "resources/audio/deuren.wav", "resources/audio/didde.wav", "resources/audio/diem.wav", "resources/audio/dieren.wav", "resources/audio/dilder.wav", "resources/audio/dingen.wav", "resources/audio/dochters.wav", "resources/audio/doelen.wav", "resources/audio/doking.wav", "resources/audio/dokters.wav", "resources/audio/dollars.wav", "resources/audio/dolmen.wav", "resources/audio/donen.wav", "resources/audio/donuts.wav", "resources/audio/dorpen.wav", "resources/audio/dosis.wav", "resources/audio/dovaan.wav", "resources/audio/draden.wav", "resources/audio/dromen.wav", "resources/audio/drunk.wav", "resources/audio/duimen.wav", "resources/audio/duis.wav", "resources/audio/dwee.wav", "resources/audio/eiland.wav", "resources/audio/examen.wav", "resources/audio/excuus.wav", "resources/audio/ezels.wav", "resources/audio/feestje.wav", "resources/audio/feik.wav", "resources/audio/figier.wav", "resources/audio/films.wav", "resources/audio/fleusde.wav", "resources/audio/fonds.wav", "resources/audio/foto.wav", "resources/audio/fouten.wav", "resources/audio/fraat.wav", "resources/audio/frartoor.wav", "resources/audio/frub.wav", "resources/audio/furkel.wav", "resources/audio/gars.wav", "resources/audio/gasten.wav", "resources/audio/gaten.wav", "resources/audio/gebied.wav", "resources/audio/gebouw.wav", "resources/audio/gedocht.wav", "resources/audio/gedoe.wav", "resources/audio/gedrag.wav", "resources/audio/geer.wav", "resources/audio/gegeven.wav", "resources/audio/geheugen.wav", "resources/audio/geluid.wav", "resources/audio/gemacht.wav", "resources/audio/genok.wav", "resources/audio/gerillen.wav", "resources/audio/gevaar.wav", "resources/audio/gevage.wav", "resources/audio/gevoel.wav", "resources/audio/gezicht.wav", "resources/audio/gids.wav", "resources/audio/gilier.wav", "resources/audio/glanding.wav", "resources/audio/glas.wav", "resources/audio/glot.wav", "resources/audio/gnole.wav", "resources/audio/gorannen.wav", "resources/audio/gous.wav", "resources/audio/graak.wav", "resources/audio/grappen.wav", "resources/audio/groost.wav", "resources/audio/grort.wav", "resources/audio/guldel.wav", "resources/audio/hals.wav", "resources/audio/handen.wav", "resources/audio/harg.wav", "resources/audio/harnas.wav", "resources/audio/hasten.wav", "resources/audio/haven.wav", "resources/audio/hawel.wav", "resources/audio/hekte.wav", "resources/audio/helg.wav", "resources/audio/helk.wav", "resources/audio/hemel.wav", "resources/audio/hemmer.wav", "resources/audio/heren.wav", "resources/audio/herkoden.wav", "resources/audio/heuk.wav", "resources/audio/heupen.wav", "resources/audio/heuvel.wav", "resources/audio/hieden.wav", "resources/audio/hittel.wav", "resources/audio/hobbels.wav", "resources/audio/honden.wav", "resources/audio/hoods.wav", "resources/audio/hoofden.wav", "resources/audio/hotels.wav", "resources/audio/hums.wav", "resources/audio/hus.wav", "resources/audio/idee.wav", "resources/audio/ies.wav", "resources/audio/indruk.wav", "resources/audio/inhochten.wav", "resources/audio/insect.wav", "resources/audio/intreek.wav", "resources/audio/invorn.wav", "resources/audio/inzweed.wav", "resources/audio/jager.wav", "resources/audio/jerken.wav", "resources/audio/jongen.wav", "resources/audio/kaars.wav", "resources/audio/kaarten.wav", "resources/audio/kaas.wav", "resources/audio/kaden.wav", "resources/audio/kamers.wav", "resources/audio/kansen.wav", "resources/audio/kantoor.wav", "resources/audio/kapie.wav", "resources/audio/kapsels.wav", "resources/audio/karste.wav", "resources/audio/kasteel.wav", "resources/audio/katten.wav", "resources/audio/keizer.wav", "resources/audio/kekst.wav", "resources/audio/kels.wav", "resources/audio/kennis.wav", "resources/audio/kerels.wav", "resources/audio/kermis.wav", "resources/audio/keten.wav", "resources/audio/keuken.wav", "resources/audio/keuzes.wav", "resources/audio/kimpen.wav", "resources/audio/kipt.wav", "resources/audio/klanten.wav", "resources/audio/kledeet.wav", "resources/audio/klens.wav", "resources/audio/kles.wav", "resources/audio/kliep.wav", "resources/audio/klinkers.wav", "resources/audio/kliteek.wav", "resources/audio/kliter.wav", "resources/audio/klokken.wav", "resources/audio/kloosters.wav", "resources/audio/kluis.wav", "resources/audio/klyppel.wav", "resources/audio/knes.wav", "resources/audio/knil.wav", "resources/audio/knoer.wav", "resources/audio/knopen.wav", "resources/audio/knoppen.wav", "resources/audio/kodaal.wav", "resources/audio/koers.wav", "resources/audio/koets.wav", "resources/audio/koffer.wav", "resources/audio/komoet.wav", "resources/audio/kompas.wav", "resources/audio/koning.wav", "resources/audio/koppen.wav", "resources/audio/kos.wav", "resources/audio/kostuums.wav", "resources/audio/kraad.wav", "resources/audio/krakin.wav", "resources/audio/kransing.wav", "resources/audio/kranten.wav", "resources/audio/kreukels.wav", "resources/audio/krij.wav", "resources/audio/krijgers.wav", "resources/audio/krivieken.wav", "resources/audio/krommel.wav", "resources/audio/krook.wav", "resources/audio/kuiken.wav", "resources/audio/kussen.wav", "resources/audio/ladders.wav", "resources/audio/laken.wav", "resources/audio/lals.wav", "resources/audio/landen.wav", "resources/audio/lates.wav", "resources/audio/laver.wav", "resources/audio/leger.wav", "resources/audio/leiders.wav", "resources/audio/leiding.wav", "resources/audio/letters.wav", "resources/audio/leugen.wav", "resources/audio/leven.wav", "resources/audio/lichten.wav", "resources/audio/liefde.wav", "resources/audio/lijf.wav", "resources/audio/lijnen.wav", "resources/audio/lijzer.wav", "resources/audio/lippen.wav", "resources/audio/loem.wav", "resources/audio/longen.wav", "resources/audio/loping.wav", "resources/audio/lopmel.wav", "resources/audio/lucifer.wav", "resources/audio/lud.wav", "resources/audio/maanden.wav", "resources/audio/mand.wav", "resources/audio/mannen.wav", "resources/audio/manper.wav", "resources/audio/mas.wav", "resources/audio/maskers.wav", "resources/audio/matras.wav", "resources/audio/meesters.wav", "resources/audio/meneer.wav", "resources/audio/mens.wav", "resources/audio/mijnen.wav", "resources/audio/mippen.wav", "resources/audio/mipper.wav", "resources/audio/missie.wav", "resources/audio/moeders.wav", "resources/audio/moeite.wav", "resources/audio/moeras.wav", "resources/audio/molen.wav", "resources/audio/moment.wav", "resources/audio/monsters.wav", "resources/audio/motor.wav", "resources/audio/motting.wav", "resources/audio/mowool.wav", "resources/audio/muziek.wav", "resources/audio/naalden.wav", "resources/audio/nachten.wav", "resources/audio/nagels.wav", "resources/audio/nas.wav", "resources/audio/navurf.wav", "resources/audio/negen.wav", "resources/audio/nesten.wav", "resources/audio/neugd.wav", "resources/audio/nieuws.wav", "resources/audio/nonnen.wav", "resources/audio/noorden.wav", "resources/audio/nummers.wav", "resources/audio/nuur.wav", "resources/audio/ochtend.wav", "resources/audio/oester.wav", "resources/audio/ogen.wav", "resources/audio/ogjesk.wav", "resources/audio/olie.wav", "resources/audio/ontbijt.wav", "resources/audio/ontzeps.wav", "resources/audio/onzin.wav", "resources/audio/oosten.wav", "resources/audio/oppas.wav", "resources/audio/opplad.wav", "resources/audio/optreden.wav", "resources/audio/orders.wav", "resources/audio/orrijn.wav", "resources/audio/ouders.wav", "resources/audio/oven.wav", "resources/audio/paam.wav", "resources/audio/padem.wav", "resources/audio/paginas.wav", "resources/audio/paleis.wav", "resources/audio/pals.wav", "resources/audio/paniek.wav", "resources/audio/pans.wav", "resources/audio/papeur.wav", "resources/audio/parel.wav", "resources/audio/partners.wav", "resources/audio/pauze.wav", "resources/audio/pemmo.wav", "resources/audio/pengel.wav", "resources/audio/penzing.wav", "resources/audio/persoon.wav", "resources/audio/pijl.wav", "resources/audio/pijver.wav", "resources/audio/pilijk.wav", "resources/audio/pillen.wav", "resources/audio/pippen.wav", "resources/audio/plaatsen.wav", "resources/audio/planeet.wav", "resources/audio/plannen.wav", "resources/audio/planten.wav", "resources/audio/plek.wav", "resources/audio/pluchten.wav", "resources/audio/politie.wav", "resources/audio/pomt.wav", "resources/audio/poom.wav", "resources/audio/porkoor.wav", "resources/audio/pors.wav", "resources/audio/posters.wav", "resources/audio/prinses.wav", "resources/audio/problemen.wav", "resources/audio/procent.wav", "resources/audio/projoet.wav", "resources/audio/prust.wav", "resources/audio/punten.wav", "resources/audio/ragding.wav", "resources/audio/ralor.wav", "resources/audio/raptart.wav", "resources/audio/rebby.wav", "resources/audio/rechters.wav", "resources/audio/reden.wav", "resources/audio/reeks.wav", "resources/audio/reer.wav", "resources/audio/regel.wav", "resources/audio/regen.wav", "resources/audio/rengen.wav", "resources/audio/res.wav", "resources/audio/respect.wav", "resources/audio/rest.wav", "resources/audio/ridder.wav", "resources/audio/ries.wav", "resources/audio/rimpels.wav", "resources/audio/ripge.wav", "resources/audio/risicos.wav", "resources/audio/robots.wav", "resources/audio/roetter.wav", "resources/audio/roffen.wav", "resources/audio/rokers.wav", "resources/audio/roogsel.wav", "resources/audio/rots.wav", "resources/audio/scheegte.wav", "resources/audio/schern.wav", "resources/audio/schoenen.wav", "resources/audio/schouders.wav", "resources/audio/schrijvers.wav", "resources/audio/schulling.wav", "resources/audio/schunder.wav", "resources/audio/sefhoren.wav", "resources/audio/seizoenen.wav", "resources/audio/sekken.wav", "resources/audio/sigier.wav", "resources/audio/sirenes.wav", "resources/audio/slacond.wav", "resources/audio/slading.wav", "resources/audio/slangen.wav", "resources/audio/slening.wav", "resources/audio/sleutels.wav", "resources/audio/slift.wav", "resources/audio/slingers.wav", "resources/audio/smaan.wav", "resources/audio/smelk.wav", "resources/audio/smoed.wav", "resources/audio/smofes.wav", "resources/audio/sneef.wav", "resources/audio/sneppel.wav", "resources/audio/snevel.wav", "resources/audio/sokken.wav", "resources/audio/soorten.wav", "resources/audio/spelers.wav", "resources/audio/spieren.wav", "resources/audio/spijkers.wav", "resources/audio/spoer.wav", "resources/audio/spol.wav", "resources/audio/spollen.wav", "resources/audio/sprading.wav", "resources/audio/stam.wav", "resources/audio/stantte.wav", "resources/audio/stapels.wav", "resources/audio/stemmen.wav", "resources/audio/stempels.wav", "resources/audio/stemte.wav", "resources/audio/ster.wav", "resources/audio/steup.wav", "resources/audio/stid.wav", "resources/audio/stijp.wav", "resources/audio/stoffen.wav", "resources/audio/storang.wav", "resources/audio/storn.wav", "resources/audio/strepen.wav", "resources/audio/strijders.wav", "resources/audio/stuin.wav", "resources/audio/stuk.wav", "resources/audio/stulee.wav", "resources/audio/succes.wav", "resources/audio/systeem.wav", "resources/audio/talekt.wav", "resources/audio/tanden.wav", "resources/audio/tapeuk.wav", "resources/audio/tarm.wav", "resources/audio/tasen.wav", "resources/audio/tasteur.wav", "resources/audio/tek.wav", "resources/audio/teken.wav", "resources/audio/tenkkiek.wav", "resources/audio/tentamen.wav", "resources/audio/terras.wav", "resources/audio/tert.wav", "resources/audio/tes.wav", "resources/audio/tiek.wav", "resources/audio/tieners.wav", "resources/audio/tijn.wav", "resources/audio/tist.wav", "resources/audio/toekomst.wav", "resources/audio/toenacht.wav", "resources/audio/toets.wav", "resources/audio/tond.wav", "resources/audio/toren.wav", "resources/audio/traga.wav", "resources/audio/trekkers.wav", "resources/audio/trep.wav", "resources/audio/troksem.wav", "resources/audio/tunnels.wav", "resources/audio/twijfels.wav", "resources/audio/types.wav", "resources/audio/vaast.wav", "resources/audio/varen.wav", "resources/audio/varken.wav", "resources/audio/vas.wav", "resources/audio/velden.wav", "resources/audio/verganden.wav", "resources/audio/verglad.wav", "resources/audio/verhaal.wav", "resources/audio/verlaar.wav", "resources/audio/verlies.wav", "resources/audio/vermoeden.wav", "resources/audio/vermogen.wav", "resources/audio/verploef.wav", "resources/audio/verrier.wav", "resources/audio/verschil.wav", "resources/audio/verstand.wav", "resources/audio/vert.wav", "resources/audio/vertrek.wav", "resources/audio/vertrouwen.wav", "resources/audio/verwij.wav", "resources/audio/verwoor.wav", "resources/audio/verzet.wav", "resources/audio/veulen.wav", "resources/audio/vingers.wav", "resources/audio/vissen.wav", "resources/audio/vissers.wav", "resources/audio/vlammen.wav", "resources/audio/vlekken.wav", "resources/audio/vliegtuig.wav", "resources/audio/vliffel.wav", "resources/audio/vlinder.wav", "resources/audio/voch.wav", "resources/audio/vodef.wav", "resources/audio/voet.wav", "resources/audio/vogels.wav", "resources/audio/volloe.wav", "resources/audio/vonnis.wav", "resources/audio/voorgakt.wav", "resources/audio/voornemen.wav", "resources/audio/voornerf.wav", "resources/audio/voortiel.wav", "resources/audio/vormen.wav", "resources/audio/vrede.wav", "resources/audio/vriend.wav", "resources/audio/vrouwen.wav", "resources/audio/vuilnis.wav", "resources/audio/vuut.wav", "resources/audio/waardes.wav", "resources/audio/waat.wav", "resources/audio/wachters.wav", "resources/audio/wagen.wav", "resources/audio/walvis.wav", "resources/audio/wanst.wav", "resources/audio/wanveep.wav", "resources/audio/wapen.wav", "resources/audio/weken.wav", "resources/audio/wels.wav", "resources/audio/wengen.wav", "resources/audio/wensen.wav", "resources/audio/wereld.wav", "resources/audio/westen.wav", "resources/audio/wetten.wav", "resources/audio/wezen.wav", "resources/audio/wiel.wav", "resources/audio/wievel.wav", "resources/audio/winkels.wav", "resources/audio/winter.wav", "resources/audio/wipsen.wav", "resources/audio/wiro.wav", "resources/audio/woede.wav", "resources/audio/wolken.wav", "resources/audio/womel.wav", "resources/audio/wonden.wav", "resources/audio/wonder.wav", "resources/audio/woorden.wav", "resources/audio/wortels.wav", "resources/audio/wukker.wav", "resources/audio/zadels.wav", "resources/audio/zaken.wav", "resources/audio/zalder.wav", "resources/audio/zan.wav", "resources/audio/zarder.wav", "resources/audio/zas.wav", "resources/audio/zegen.wav", "resources/audio/zek.wav", "resources/audio/zetver.wav", "resources/audio/zetzerken.wav", "resources/audio/ziektes.wav", "resources/audio/zielen.wav", "resources/audio/zis.wav", "resources/audio/zoe.wav", "resources/audio/zomers.wav", "resources/audio/zorgen.wav", "resources/audio/zuiden.wav", "resources/audio/zun.wav", "resources/audio/zwaktes.wav", "resources/audio/zwervers.wav", "resources/list1.xlsx", "resources/list2.xlsx", "resources/list3.xlsx", "resources/practice.xlsx"]) === core.ServerManager.ResourceStatus.DOWNLOADED) {
         console.log('finished downloading resources specified by component resources');
         resources.status = PsychoJS.Status.FINISHED;
       } else {
@@ -457,7 +1053,7 @@ function practiceLoopBegin(practiceLoopScheduler, snapshot) {
     // set up handler to look after randomisation of conditions etc
     practice = new TrialHandler({
       psychoJS: psychoJS,
-      nReps: 1, method: TrialHandler.Method.RANDOM,
+      nReps: 0, method: TrialHandler.Method.RANDOM,
       extraInfo: expInfo, originPath: undefined,
       trialList: 'resources/practice.xlsx',
       seed: undefined, name: 'practice'
@@ -723,6 +1319,8 @@ function primeStimRoutineBegin(snapshot) {
     routineTimer.reset();
     primeStimMaxDurationReached = false;
     // update component parameters for each repeat
+    primeAudio.setValue(`resources/audio/${prime_audio}`);
+    primeAudio.setVolume(1.0);
     primeText.setText(prime);
     primeKey.keys = undefined;
     primeKey.rt = undefined;
@@ -731,6 +1329,7 @@ function primeStimRoutineBegin(snapshot) {
     primeStimMaxDuration = null
     // keep track of which components have finished
     primeStimComponents = [];
+    primeStimComponents.push(primeAudio);
     primeStimComponents.push(primeText);
     primeStimComponents.push(primeKey);
     
@@ -749,6 +1348,19 @@ function primeStimRoutineEachFrame() {
     t = primeStimClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
+    // start/stop primeAudio
+    if (t >= 0.0 && primeAudio.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      primeAudio.tStart = t;  // (not accounting for frame time here)
+      primeAudio.frameNStart = frameN;  // exact frame index
+      
+      psychoJS.window.callOnFlip(function(){ primeAudio.play(); });  // screen flip
+      primeAudio.status = PsychoJS.Status.STARTED;
+    }
+    if (t >= (primeAudio.getDuration() + primeAudio.tStart)     && primeAudio.status === PsychoJS.Status.STARTED) {
+      primeAudio.stop();  // stop the sound (if longer than duration)
+      primeAudio.status = PsychoJS.Status.FINISHED;
+    }
     
     // *primeText* updates
     if (t >= 0 && primeText.status === PsychoJS.Status.NOT_STARTED) {
@@ -826,6 +1438,7 @@ function primeStimRoutineEnd(snapshot) {
       }
     }
     psychoJS.experiment.addData('primeStim.stopped', globalClock.getTime());
+    primeAudio.stop();  // ensure sound has stopped at end of Routine
     // was no response the correct answer?!
     if (primeKey.keys === undefined) {
       if (['None','none',undefined].includes(prime_corrAns)) {
@@ -1008,6 +1621,9 @@ function targetStimRoutineBegin(snapshot) {
     routineTimer.reset();
     targetStimMaxDurationReached = false;
     // update component parameters for each repeat
+    targetAudio.setValue(`resources/audio/${target_audio}`);
+    targetAudio.secs=1.0;
+    targetAudio.setVolume(1.0);
     targetText.setText(target);
     targetKey.keys = undefined;
     targetKey.rt = undefined;
@@ -1016,6 +1632,7 @@ function targetStimRoutineBegin(snapshot) {
     targetStimMaxDuration = null
     // keep track of which components have finished
     targetStimComponents = [];
+    targetStimComponents.push(targetAudio);
     targetStimComponents.push(targetText);
     targetStimComponents.push(targetKey);
     
@@ -1034,6 +1651,22 @@ function targetStimRoutineEachFrame() {
     t = targetStimClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
+    // start/stop targetAudio
+    if (t >= 0.0 && targetAudio.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      targetAudio.tStart = t;  // (not accounting for frame time here)
+      targetAudio.frameNStart = frameN;  // exact frame index
+      
+      psychoJS.window.callOnFlip(function(){ targetAudio.play(); });  // screen flip
+      targetAudio.status = PsychoJS.Status.STARTED;
+    }
+    frameRemains = 0.0 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;// most of one frame period left
+    if (targetAudio.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      if (t >= targetAudio.tStart + 0.5) {
+        targetAudio.stop();  // stop the sound (if longer than duration)
+        targetAudio.status = PsychoJS.Status.FINISHED;
+      }
+    }
     
     // *targetText* updates
     if (t >= 0 && targetText.status === PsychoJS.Status.NOT_STARTED) {
@@ -1111,6 +1744,7 @@ function targetStimRoutineEnd(snapshot) {
       }
     }
     psychoJS.experiment.addData('targetStim.stopped', globalClock.getTime());
+    targetAudio.stop();  // ensure sound has stopped at end of Routine
     // was no response the correct answer?!
     if (targetKey.keys === undefined) {
       if (['None','none',undefined].includes(target_corrAns)) {
@@ -1330,7 +1964,6 @@ function pauseRoutineBegin(snapshot) {
         continueRoutine = false;
     }
     
-    breakText.setText(text);
     breakKey.keys = undefined;
     breakKey.rt = undefined;
     _breakKey_allKeys = [];

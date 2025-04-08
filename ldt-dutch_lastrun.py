@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on April 08, 2025, at 16:39
+    on April 08, 2025, at 18:16
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -40,7 +40,7 @@ deviceManager = hardware.DeviceManager()
 _thisDir = os.path.dirname(os.path.abspath(__file__))
 # store info about the experiment session
 psychopyVersion = '2024.2.4'
-expName = 'primingPlurals'  # from the Builder filename that created this script
+expName = 'ldt-dutch'  # from the Builder filename that created this script
 # information about this experiment
 expInfo = {
     'participant': '',
@@ -60,7 +60,7 @@ or run the experiment with `--pilot` as an argument. To change what pilot
 PILOTING = core.setPilotModeFromArgs()
 # start off with values from experiment settings
 _fullScr = True
-_winSize = [1536, 864]
+_winSize = [2560, 1440]
 # if in pilot mode, apply overrides according to preferences
 if PILOTING:
     # force windowed mode
@@ -254,12 +254,24 @@ def setupDevices(expInfo, thisExp, win):
             deviceClass='keyboard',
             deviceName='welcomeKey',
         )
+    # create speaker 'primeAudio'
+    deviceManager.addDevice(
+        deviceName='primeAudio',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
     if deviceManager.getDevice('primeKey') is None:
         # initialise primeKey
         primeKey = deviceManager.addDevice(
             deviceClass='keyboard',
             deviceName='primeKey',
         )
+    # create speaker 'targetAudio'
+    deviceManager.addDevice(
+        deviceName='targetAudio',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
     if deviceManager.getDevice('targetKey') is None:
         # initialise targetKey
         targetKey = deviceManager.addDevice(
@@ -399,13 +411,21 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         depth=-1.0);
     
     # --- Initialize components for Routine "primeStim" ---
+    primeAudio = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='primeAudio',    name='primeAudio'
+    )
+    primeAudio.setVolume(1.0)
     primeText = visual.TextStim(win=win, name='primeText',
         text='',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=0.0);
+        depth=-1.0);
     primeKey = keyboard.Keyboard(deviceName='primeKey')
     
     # --- Initialize components for Routine "feedback" ---
@@ -429,13 +449,21 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         depth=-1.0);
     
     # --- Initialize components for Routine "targetStim" ---
+    targetAudio = sound.Sound(
+        'A', 
+        secs=1.0, 
+        stereo=True, 
+        hamming=True, 
+        speaker='targetAudio',    name='targetAudio'
+    )
+    targetAudio.setVolume(1.0)
     targetText = visual.TextStim(win=win, name='targetText',
         text='',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=0.0);
+        depth=-1.0);
     targetKey = keyboard.Keyboard(deviceName='targetKey')
     
     # --- Initialize components for Routine "feedback" ---
@@ -469,13 +497,21 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         depth=-1.0);
     
     # --- Initialize components for Routine "primeStim" ---
+    primeAudio = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='primeAudio',    name='primeAudio'
+    )
+    primeAudio.setVolume(1.0)
     primeText = visual.TextStim(win=win, name='primeText',
         text='',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=0.0);
+        depth=-1.0);
     primeKey = keyboard.Keyboard(deviceName='primeKey')
     
     # --- Initialize components for Routine "fix" ---
@@ -488,13 +524,21 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         depth=-1.0);
     
     # --- Initialize components for Routine "targetStim" ---
+    targetAudio = sound.Sound(
+        'A', 
+        secs=1.0, 
+        stereo=True, 
+        hamming=True, 
+        speaker='targetAudio',    name='targetAudio'
+    )
+    targetAudio.setVolume(1.0)
     targetText = visual.TextStim(win=win, name='targetText',
         text='',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=0.0);
+        depth=-1.0);
     targetKey = keyboard.Keyboard(deviceName='targetKey')
     
     # --- Initialize components for Routine "pause" ---
@@ -505,7 +549,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     breakN = 0    
     breakOn = multiples(36,8)
     breakText = visual.TextStim(win=win, name='breakText',
-        text='',
+        text=None,
         font='Arial',
         units='norm', pos=(0, 0), draggable=False, height=0.1, wrapWidth=1.8, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -692,7 +736,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # set up handler to look after randomisation of conditions etc
     practice = data.TrialHandler2(
         name='practice',
-        nReps=1.0, 
+        nReps=0.0, 
         method='random', 
         extraInfo=expInfo, 
         originPath=-1, 
@@ -845,11 +889,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine primeStim
         primeStim = data.Routine(
             name='primeStim',
-            components=[primeText, primeKey],
+            components=[primeAudio, primeText, primeKey],
         )
         primeStim.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
+        primeAudio.setSound('resources/audio/%s'%(prime_audio), hamming=True)
+        primeAudio.setVolume(1.0, log=False)
+        primeAudio.seek(0)
         primeText.setText(prime)
         # create starting attributes for primeKey
         primeKey.keys = []
@@ -887,6 +934,33 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
+            
+            # *primeAudio* updates
+            
+            # if primeAudio is starting this frame...
+            if primeAudio.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                primeAudio.frameNStart = frameN  # exact frame index
+                primeAudio.tStart = t  # local t and not account for scr refresh
+                primeAudio.tStartRefresh = tThisFlipGlobal  # on global time
+                # add timestamp to datafile
+                thisExp.addData('primeAudio.started', tThisFlipGlobal)
+                # update status
+                primeAudio.status = STARTED
+                primeAudio.play(when=win)  # sync with win flip
+            
+            # if primeAudio is stopping this frame...
+            if primeAudio.status == STARTED:
+                if bool(False) or primeAudio.isFinished:
+                    # keep track of stop time/frame for later
+                    primeAudio.tStop = t  # not accounting for scr refresh
+                    primeAudio.tStopRefresh = tThisFlipGlobal  # on global time
+                    primeAudio.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'primeAudio.stopped')
+                    # update status
+                    primeAudio.status = FINISHED
+                    primeAudio.stop()
             
             # *primeText* updates
             
@@ -953,7 +1027,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     thisExp=thisExp, 
                     win=win, 
                     timers=[routineTimer], 
-                    playbackComponents=[]
+                    playbackComponents=[primeAudio]
                 )
                 # skip the frame we paused on
                 continue
@@ -980,6 +1054,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         primeStim.tStop = globalClock.getTime(format='float')
         primeStim.tStopRefresh = tThisFlipGlobal
         thisExp.addData('primeStim.stopped', primeStim.tStop)
+        primeAudio.pause()  # ensure sound has stopped at end of Routine
         # check responses
         if primeKey.keys in ['', [], None]:  # No response was made
             primeKey.keys = None
@@ -1283,11 +1358,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine targetStim
         targetStim = data.Routine(
             name='targetStim',
-            components=[targetText, targetKey],
+            components=[targetAudio, targetText, targetKey],
         )
         targetStim.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
+        targetAudio.setSound('resources/audio/%s'%(target_audio), secs=1.0, hamming=True)
+        targetAudio.setVolume(1.0, log=False)
+        targetAudio.seek(0)
         targetText.setText(target)
         # create starting attributes for targetKey
         targetKey.keys = []
@@ -1325,6 +1403,34 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
+            
+            # *targetAudio* updates
+            
+            # if targetAudio is starting this frame...
+            if targetAudio.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                targetAudio.frameNStart = frameN  # exact frame index
+                targetAudio.tStart = t  # local t and not account for scr refresh
+                targetAudio.tStartRefresh = tThisFlipGlobal  # on global time
+                # add timestamp to datafile
+                thisExp.addData('targetAudio.started', tThisFlipGlobal)
+                # update status
+                targetAudio.status = STARTED
+                targetAudio.play(when=win)  # sync with win flip
+            
+            # if targetAudio is stopping this frame...
+            if targetAudio.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > targetAudio.tStartRefresh + 1.0-frameTolerance or targetAudio.isFinished:
+                    # keep track of stop time/frame for later
+                    targetAudio.tStop = t  # not accounting for scr refresh
+                    targetAudio.tStopRefresh = tThisFlipGlobal  # on global time
+                    targetAudio.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'targetAudio.stopped')
+                    # update status
+                    targetAudio.status = FINISHED
+                    targetAudio.stop()
             
             # *targetText* updates
             
@@ -1391,7 +1497,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     thisExp=thisExp, 
                     win=win, 
                     timers=[routineTimer], 
-                    playbackComponents=[]
+                    playbackComponents=[targetAudio]
                 )
                 # skip the frame we paused on
                 continue
@@ -1418,6 +1524,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         targetStim.tStop = globalClock.getTime(format='float')
         targetStim.tStopRefresh = tThisFlipGlobal
         thisExp.addData('targetStim.stopped', targetStim.tStop)
+        targetAudio.pause()  # ensure sound has stopped at end of Routine
         # check responses
         if targetKey.keys in ['', [], None]:  # No response was made
             targetKey.keys = None
@@ -1597,7 +1704,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             routineTimer.addTime(-0.500000)
         thisExp.nextEntry()
         
-    # completed 1.0 repeats of 'practice'
+    # completed 0.0 repeats of 'practice'
     
     if thisSession is not None:
         # if running in a Session with a Liaison client, send data up to now
@@ -1898,11 +2005,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine primeStim
         primeStim = data.Routine(
             name='primeStim',
-            components=[primeText, primeKey],
+            components=[primeAudio, primeText, primeKey],
         )
         primeStim.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
+        primeAudio.setSound('resources/audio/%s'%(prime_audio), hamming=True)
+        primeAudio.setVolume(1.0, log=False)
+        primeAudio.seek(0)
         primeText.setText(prime)
         # create starting attributes for primeKey
         primeKey.keys = []
@@ -1940,6 +2050,33 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
+            
+            # *primeAudio* updates
+            
+            # if primeAudio is starting this frame...
+            if primeAudio.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                primeAudio.frameNStart = frameN  # exact frame index
+                primeAudio.tStart = t  # local t and not account for scr refresh
+                primeAudio.tStartRefresh = tThisFlipGlobal  # on global time
+                # add timestamp to datafile
+                thisExp.addData('primeAudio.started', tThisFlipGlobal)
+                # update status
+                primeAudio.status = STARTED
+                primeAudio.play(when=win)  # sync with win flip
+            
+            # if primeAudio is stopping this frame...
+            if primeAudio.status == STARTED:
+                if bool(False) or primeAudio.isFinished:
+                    # keep track of stop time/frame for later
+                    primeAudio.tStop = t  # not accounting for scr refresh
+                    primeAudio.tStopRefresh = tThisFlipGlobal  # on global time
+                    primeAudio.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'primeAudio.stopped')
+                    # update status
+                    primeAudio.status = FINISHED
+                    primeAudio.stop()
             
             # *primeText* updates
             
@@ -2006,7 +2143,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     thisExp=thisExp, 
                     win=win, 
                     timers=[routineTimer], 
-                    playbackComponents=[]
+                    playbackComponents=[primeAudio]
                 )
                 # skip the frame we paused on
                 continue
@@ -2033,6 +2170,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         primeStim.tStop = globalClock.getTime(format='float')
         primeStim.tStopRefresh = tThisFlipGlobal
         thisExp.addData('primeStim.stopped', primeStim.tStop)
+        primeAudio.pause()  # ensure sound has stopped at end of Routine
         # check responses
         if primeKey.keys in ['', [], None]:  # No response was made
             primeKey.keys = None
@@ -2175,11 +2313,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine targetStim
         targetStim = data.Routine(
             name='targetStim',
-            components=[targetText, targetKey],
+            components=[targetAudio, targetText, targetKey],
         )
         targetStim.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
+        targetAudio.setSound('resources/audio/%s'%(target_audio), secs=1.0, hamming=True)
+        targetAudio.setVolume(1.0, log=False)
+        targetAudio.seek(0)
         targetText.setText(target)
         # create starting attributes for targetKey
         targetKey.keys = []
@@ -2217,6 +2358,34 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
+            
+            # *targetAudio* updates
+            
+            # if targetAudio is starting this frame...
+            if targetAudio.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                targetAudio.frameNStart = frameN  # exact frame index
+                targetAudio.tStart = t  # local t and not account for scr refresh
+                targetAudio.tStartRefresh = tThisFlipGlobal  # on global time
+                # add timestamp to datafile
+                thisExp.addData('targetAudio.started', tThisFlipGlobal)
+                # update status
+                targetAudio.status = STARTED
+                targetAudio.play(when=win)  # sync with win flip
+            
+            # if targetAudio is stopping this frame...
+            if targetAudio.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > targetAudio.tStartRefresh + 1.0-frameTolerance or targetAudio.isFinished:
+                    # keep track of stop time/frame for later
+                    targetAudio.tStop = t  # not accounting for scr refresh
+                    targetAudio.tStopRefresh = tThisFlipGlobal  # on global time
+                    targetAudio.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'targetAudio.stopped')
+                    # update status
+                    targetAudio.status = FINISHED
+                    targetAudio.stop()
             
             # *targetText* updates
             
@@ -2283,7 +2452,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     thisExp=thisExp, 
                     win=win, 
                     timers=[routineTimer], 
-                    playbackComponents=[]
+                    playbackComponents=[targetAudio]
                 )
                 # skip the frame we paused on
                 continue
@@ -2310,6 +2479,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         targetStim.tStop = globalClock.getTime(format='float')
         targetStim.tStopRefresh = tThisFlipGlobal
         thisExp.addData('targetStim.stopped', targetStim.tStop)
+        targetAudio.pause()  # ensure sound has stopped at end of Routine
         # check responses
         if targetKey.keys in ['', [], None]:  # No response was made
             targetKey.keys = None
@@ -2339,10 +2509,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # Run 'Begin Routine' code from breakCode
         if trials.thisN+1 in breakOn[:-1]:
             continueRoutine = True
+            breakText.setText("")
             breakN = breakN + 1
+            text = 'Dit was blok %s van de %s.\n\n Neem even pauze en druk dan op de spatiebalk om verder te gaan.'%(breakN, len(breakOn))
+            breakText.setText(text)
         else:
             continueRoutine = False
-        breakText.setText('Dit was blok %s van de %s.\n\n Neem even pauze en druk dan op de spatiebalk om verder te gaan.'%(breakN, len(breakOn)))
         # create starting attributes for breakKey
         breakKey.keys = []
         breakKey.rt = []
