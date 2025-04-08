@@ -785,7 +785,7 @@ async function experimentInit() {
     pos: [0, 0], draggable: false, height: 0.05,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
-    depth: -2.0 
+    depth: -1.0 
   });
   
   primeKey = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
@@ -812,7 +812,7 @@ async function experimentInit() {
   targetAudio = new sound.Sound({
       win: psychoJS.window,
       value: 'A',
-      secs: 1.0,
+      secs: (- 1),
       });
   targetAudio.setVolume(1.0);
   targetText = new visual.TextStim({
@@ -824,7 +824,7 @@ async function experimentInit() {
     pos: [0, 0], draggable: false, height: 0.05,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
-    depth: -2.0 
+    depth: -1.0 
   });
   
   targetKey = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
@@ -1305,9 +1305,6 @@ function primeStimRoutineBegin(snapshot) {
     // update component parameters for each repeat
     primeAudio.setValue(`resources/audio/${prime_audio}`);
     primeAudio.setVolume(1.0);
-    // Run 'Begin Routine' code from primeCode
-    primeAudio.status = NOT_STARTED;
-    
     primeText.setText(prime);
     primeKey.keys = undefined;
     primeKey.rt = undefined;
@@ -1336,7 +1333,7 @@ function primeStimRoutineEachFrame() {
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
     // start/stop primeAudio
-    if (t >= 0.0 && primeAudio.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 0.01 && primeAudio.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       primeAudio.tStart = t;  // (not accounting for frame time here)
       primeAudio.frameNStart = frameN;  // exact frame index
@@ -1608,11 +1605,7 @@ function targetStimRoutineBegin(snapshot) {
     routineTimer.reset();
     targetStimMaxDurationReached = false;
     // update component parameters for each repeat
-    // Run 'Begin Routine' code from targetCode
-    targetAudio.status = NOT_STARTED;
-    
     targetAudio.setValue(`resources/audio/${target_audio}`);
-    targetAudio.secs=1.0;
     targetAudio.setVolume(1.0);
     targetText.setText(target);
     targetKey.keys = undefined;
@@ -1642,7 +1635,7 @@ function targetStimRoutineEachFrame() {
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
     // start/stop targetAudio
-    if (t >= 0.0 && targetAudio.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 0.01 && targetAudio.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       targetAudio.tStart = t;  // (not accounting for frame time here)
       targetAudio.frameNStart = frameN;  // exact frame index
@@ -1650,12 +1643,9 @@ function targetStimRoutineEachFrame() {
       psychoJS.window.callOnFlip(function(){ targetAudio.play(); });  // screen flip
       targetAudio.status = PsychoJS.Status.STARTED;
     }
-    frameRemains = 0.0 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;// most of one frame period left
-    if (targetAudio.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      if (t >= targetAudio.tStart + 0.5) {
-        targetAudio.stop();  // stop the sound (if longer than duration)
-        targetAudio.status = PsychoJS.Status.FINISHED;
-      }
+    if (t >= (targetAudio.getDuration() + targetAudio.tStart)     && targetAudio.status === PsychoJS.Status.STARTED) {
+      targetAudio.stop();  // stop the sound (if longer than duration)
+      targetAudio.status = PsychoJS.Status.FINISHED;
     }
     
     // *targetText* updates
