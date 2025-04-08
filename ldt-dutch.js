@@ -785,7 +785,7 @@ async function experimentInit() {
     pos: [0, 0], draggable: false, height: 0.05,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
-    depth: -1.0 
+    depth: -2.0 
   });
   
   primeKey = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
@@ -824,7 +824,7 @@ async function experimentInit() {
     pos: [0, 0], draggable: false, height: 0.05,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
-    depth: -1.0 
+    depth: -2.0 
   });
   
   targetKey = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
@@ -1305,6 +1305,9 @@ function primeStimRoutineBegin(snapshot) {
     // update component parameters for each repeat
     primeAudio.setValue(`resources/audio/${prime_audio}`);
     primeAudio.setVolume(1.0);
+    // Run 'Begin Routine' code from primeCode
+    primeAudio.status = NOT_STARTED;
+    
     primeText.setText(prime);
     primeKey.keys = undefined;
     primeKey.rt = undefined;
@@ -1605,6 +1608,9 @@ function targetStimRoutineBegin(snapshot) {
     routineTimer.reset();
     targetStimMaxDurationReached = false;
     // update component parameters for each repeat
+    // Run 'Begin Routine' code from targetCode
+    targetAudio.status = NOT_STARTED;
+    
     targetAudio.setValue(`resources/audio/${target_audio}`);
     targetAudio.secs=1.0;
     targetAudio.setVolume(1.0);

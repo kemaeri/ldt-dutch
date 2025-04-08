@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on April 08, 2025, at 18:42
+    on April 08, 2025, at 18:56
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -425,7 +425,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-1.0);
+        depth=-2.0);
     primeKey = keyboard.Keyboard(deviceName='primeKey')
     
     # --- Initialize components for Routine "feedback" ---
@@ -463,7 +463,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-1.0);
+        depth=-2.0);
     targetKey = keyboard.Keyboard(deviceName='targetKey')
     
     # --- Initialize components for Routine "feedback" ---
@@ -511,7 +511,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-1.0);
+        depth=-2.0);
     primeKey = keyboard.Keyboard(deviceName='primeKey')
     
     # --- Initialize components for Routine "fix" ---
@@ -538,7 +538,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-1.0);
+        depth=-2.0);
     targetKey = keyboard.Keyboard(deviceName='targetKey')
     
     # --- Initialize components for Routine "pause" ---
@@ -736,7 +736,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # set up handler to look after randomisation of conditions etc
     practice = data.TrialHandler2(
         name='practice',
-        nReps=0.0, 
+        nReps=1.0, 
         method='random', 
         extraInfo=expInfo, 
         originPath=-1, 
@@ -897,6 +897,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         primeAudio.setSound('resources/audio/%s'%(prime_audio), hamming=True)
         primeAudio.setVolume(1.0, log=False)
         primeAudio.seek(0)
+        # Run 'Begin Routine' code from primeCode
+        primeAudio.status = NOT_STARTED
         primeText.setText(prime)
         # create starting attributes for primeKey
         primeKey.keys = []
@@ -1363,6 +1365,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         targetStim.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
+        # Run 'Begin Routine' code from targetCode
+        targetAudio.status = NOT_STARTED
         targetAudio.setSound('resources/audio/%s'%(target_audio), secs=1.0, hamming=True)
         targetAudio.setVolume(1.0, log=False)
         targetAudio.seek(0)
@@ -1704,7 +1708,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             routineTimer.addTime(-0.500000)
         thisExp.nextEntry()
         
-    # completed 0.0 repeats of 'practice'
+    # completed 1.0 repeats of 'practice'
     
     if thisSession is not None:
         # if running in a Session with a Liaison client, send data up to now
@@ -2013,6 +2017,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         primeAudio.setSound('resources/audio/%s'%(prime_audio), hamming=True)
         primeAudio.setVolume(1.0, log=False)
         primeAudio.seek(0)
+        # Run 'Begin Routine' code from primeCode
+        primeAudio.status = NOT_STARTED
         primeText.setText(prime)
         # create starting attributes for primeKey
         primeKey.keys = []
@@ -2318,6 +2324,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         targetStim.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
+        # Run 'Begin Routine' code from targetCode
+        targetAudio.status = NOT_STARTED
         targetAudio.setSound('resources/audio/%s'%(target_audio), secs=1.0, hamming=True)
         targetAudio.setVolume(1.0, log=False)
         targetAudio.seek(0)
