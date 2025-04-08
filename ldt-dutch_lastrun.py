@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on April 08, 2025, at 18:56
+    on April 08, 2025, at 19:06
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -425,7 +425,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-2.0);
+        depth=-1.0);
     primeKey = keyboard.Keyboard(deviceName='primeKey')
     
     # --- Initialize components for Routine "feedback" ---
@@ -451,7 +451,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # --- Initialize components for Routine "targetStim" ---
     targetAudio = sound.Sound(
         'A', 
-        secs=1.0, 
+        secs=-1, 
         stereo=True, 
         hamming=True, 
         speaker='targetAudio',    name='targetAudio'
@@ -463,7 +463,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-2.0);
+        depth=-1.0);
     targetKey = keyboard.Keyboard(deviceName='targetKey')
     
     # --- Initialize components for Routine "feedback" ---
@@ -511,7 +511,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-2.0);
+        depth=-1.0);
     primeKey = keyboard.Keyboard(deviceName='primeKey')
     
     # --- Initialize components for Routine "fix" ---
@@ -526,7 +526,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # --- Initialize components for Routine "targetStim" ---
     targetAudio = sound.Sound(
         'A', 
-        secs=1.0, 
+        secs=-1, 
         stereo=True, 
         hamming=True, 
         speaker='targetAudio',    name='targetAudio'
@@ -538,7 +538,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-2.0);
+        depth=-1.0);
     targetKey = keyboard.Keyboard(deviceName='targetKey')
     
     # --- Initialize components for Routine "pause" ---
@@ -897,8 +897,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         primeAudio.setSound('resources/audio/%s'%(prime_audio), hamming=True)
         primeAudio.setVolume(1.0, log=False)
         primeAudio.seek(0)
-        # Run 'Begin Routine' code from primeCode
-        primeAudio.status = NOT_STARTED
         primeText.setText(prime)
         # create starting attributes for primeKey
         primeKey.keys = []
@@ -1365,9 +1363,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         targetStim.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
-        # Run 'Begin Routine' code from targetCode
-        targetAudio.status = NOT_STARTED
-        targetAudio.setSound('resources/audio/%s'%(target_audio), secs=1.0, hamming=True)
+        targetAudio.setSound('resources/audio/%s'%(target_audio), hamming=True)
         targetAudio.setVolume(1.0, log=False)
         targetAudio.seek(0)
         targetText.setText(target)
@@ -1424,8 +1420,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
             # if targetAudio is stopping this frame...
             if targetAudio.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > targetAudio.tStartRefresh + 1.0-frameTolerance or targetAudio.isFinished:
+                if bool(False) or targetAudio.isFinished:
                     # keep track of stop time/frame for later
                     targetAudio.tStop = t  # not accounting for scr refresh
                     targetAudio.tStopRefresh = tThisFlipGlobal  # on global time
@@ -2017,8 +2012,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         primeAudio.setSound('resources/audio/%s'%(prime_audio), hamming=True)
         primeAudio.setVolume(1.0, log=False)
         primeAudio.seek(0)
-        # Run 'Begin Routine' code from primeCode
-        primeAudio.status = NOT_STARTED
         primeText.setText(prime)
         # create starting attributes for primeKey
         primeKey.keys = []
@@ -2324,9 +2317,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         targetStim.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
-        # Run 'Begin Routine' code from targetCode
-        targetAudio.status = NOT_STARTED
-        targetAudio.setSound('resources/audio/%s'%(target_audio), secs=1.0, hamming=True)
+        targetAudio.setSound('resources/audio/%s'%(target_audio), hamming=True)
         targetAudio.setVolume(1.0, log=False)
         targetAudio.seek(0)
         targetText.setText(target)
@@ -2383,8 +2374,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
             # if targetAudio is stopping this frame...
             if targetAudio.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > targetAudio.tStartRefresh + 1.0-frameTolerance or targetAudio.isFinished:
+                if bool(False) or targetAudio.isFinished:
                     # keep track of stop time/frame for later
                     targetAudio.tStop = t  # not accounting for scr refresh
                     targetAudio.tStopRefresh = tThisFlipGlobal  # on global time

@@ -1330,7 +1330,7 @@ function primeStimRoutineEachFrame() {
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
     // start/stop primeAudio
-    if (t >= 0.01 && primeAudio.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 0.0 && primeAudio.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       primeAudio.tStart = t;  // (not accounting for frame time here)
       primeAudio.frameNStart = frameN;  // exact frame index
@@ -1634,7 +1634,7 @@ function targetStimRoutineEachFrame() {
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
     // start/stop targetAudio
-    if (t >= 0.01 && targetAudio.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 0.0 && targetAudio.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       targetAudio.tStart = t;  // (not accounting for frame time here)
       targetAudio.frameNStart = frameN;  // exact frame index
