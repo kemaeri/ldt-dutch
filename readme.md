@@ -4,9 +4,12 @@
 Je kunt het experiment direct openen via GitHub pages. Ga hiervoor naar [deze link](https://kemaeri.github.io/ldt-dutch/).
 
 ## Testafname
-> Stuur de participant een link naar de Qualtrics survey. Ik wil nog automatiseren dat ze direct in de qualtrics survey hun participantnummer en lijstnummer in kunnen vullen. Na het invullen van de survey, wordt de participant doorgestuurd naar het experiment. Ze hoeven dat niet opnieuw hun participantnummer en lijstnummer in te vullen.
+Geef de participant een link naar de [Qualtrics survey](https://rug.eu.qualtrics.com/jfe/form/SV_abMYpCjhD4CARDM) en een [participantnummer uit het logboek](https://docs.google.com/spreadsheets/d/1xGSiiJm1A-MoZm2qRi1O4dlSQguSb_KdlU0Y-zu_NPo/edit?usp=drive_link). De participant vult dit nummer in de survey in en de lijst waar ze bijhoren wordt dan automatisch bepaald.
+Aan het einde van de survey worden ze automatisch doorgestuurd naar het experiment.
+Als het experiment is afgelopen, komt er in beeld te staan dat ze even moeten wachten tot de resultaten zijn opgeslagen. Het is belangrijk dat ze het scherm dan niet sluiten. Misschien moet dit even vermeld worden tijdens de instructies.
+Als er een groene pop-up in beeld komt met een bedankberichtje, dan is de data opgeslagen in OSF en kan het scherm worden gesloten. De participant is dan klaar.
 
-Bovenstaande moet ik nog regelen. Misschien automatiseer ik ook de toewijzing van het lijstnummer, zodat je alleen een participantnummer hoeft door te geven, maar ik weet niet of dit mogelijk is met Qualtrics.
-
+## Dataverwerking
+De [data wordt op OSF opgeslagen](https://osf.io/drhw6/files/osfstorage?view_only=e255ef1c82f649c3855d167fba97772e) als een JSON-bestand. Dit bestand converteer ik tot een CSV bestand. Daarna [upload ik de data naar Google Drive](https://drive.google.com/drive/u/1/folders/1TZHz0fZHajoFWIoGdo7YAhT_RxhbtyZ5).
 
 
