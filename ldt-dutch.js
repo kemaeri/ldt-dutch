@@ -76,10 +76,10 @@ flowScheduler.add(trialsLoopEnd);
 flowScheduler.add(endRoutineBegin());
 flowScheduler.add(endRoutineEachFrame());
 flowScheduler.add(endRoutineEnd());
-flowScheduler.add(quitPsychoJS, 'Thank you for your patience.', true);
+flowScheduler.add(quitPsychoJS, 'Bedankt voor het meedoen!', true);
 
 // quit if user presses Cancel in dialog box:
-dialogCancelScheduler.add(quitPsychoJS, 'Thank you for your patience.', false);
+dialogCancelScheduler.add(quitPsychoJS, 'Bedankt voor het meedoen!', false);
 
 psychoJS.start({
   expName: expName,
@@ -87,6 +87,8 @@ psychoJS.start({
   resources: [
     // resources:
     {'name': 'resources/practice.xlsx', 'path': 'resources/practice.xlsx'},
+    {'name': 'resources/volume_icon.png', 'path': 'resources/volume_icon.png'},
+    {'name': 'resources/volume_icon.png', 'path': 'resources/volume_icon.png'},
     {'name': 'resources/list1.xlsx', 'path': 'resources/list1.xlsx'},
     {'name': 'resources/list2.xlsx', 'path': 'resources/list2.xlsx'},
     {'name': 'resources/list3.xlsx', 'path': 'resources/list3.xlsx'},
@@ -716,14 +718,14 @@ var fixClock;
 var fix_rand;
 var primeStimClock;
 var primeAudio;
-var primeText;
+var primeImage;
 var primeKey;
 var feedbackClock;
 var primed;
 var feedbackText;
 var targetStimClock;
 var targetAudio;
-var targetText;
+var targetImage;
 var targetKey;
 var startClock;
 var startText;
@@ -776,18 +778,19 @@ async function experimentInit() {
       secs: (- 1),
       });
   primeAudio.setVolume(1.0);
-  primeText = new visual.TextStim({
-    win: psychoJS.window,
-    name: 'primeText',
-    text: '',
-    font: 'Arial',
-    units: undefined, 
-    pos: [0, 0], draggable: false, height: 0.05,  wrapWidth: undefined, ori: 0.0,
-    languageStyle: 'LTR',
-    color: new util.Color('white'),  opacity: undefined,
-    depth: -1.0 
+  primeImage = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'primeImage', units : undefined, 
+    image : 'resources/volume_icon.png', mask : undefined,
+    anchor : 'center',
+    ori : 0.0, 
+    pos : [0, 0], 
+    draggable: false,
+    size : [0.2, 0.2],
+    color : new util.Color([1,1,1]), opacity : undefined,
+    flipHoriz : false, flipVert : false,
+    texRes : 128.0, interpolate : true, depth : -1.0 
   });
-  
   primeKey = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   // Initialize components for Routine "feedback"
@@ -815,18 +818,19 @@ async function experimentInit() {
       secs: (- 1),
       });
   targetAudio.setVolume(1.0);
-  targetText = new visual.TextStim({
-    win: psychoJS.window,
-    name: 'targetText',
-    text: '',
-    font: 'Arial',
-    units: undefined, 
-    pos: [0, 0], draggable: false, height: 0.05,  wrapWidth: undefined, ori: 0.0,
-    languageStyle: 'LTR',
-    color: new util.Color('white'),  opacity: undefined,
-    depth: -1.0 
+  targetImage = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'targetImage', units : undefined, 
+    image : 'resources/volume_icon.png', mask : undefined,
+    anchor : 'center',
+    ori : 0.0, 
+    pos : [0, 0], 
+    draggable: false,
+    size : [0.2, 0.2],
+    color : new util.Color([1,1,1]), opacity : undefined,
+    flipHoriz : false, flipVert : false,
+    texRes : 128.0, interpolate : true, depth : -1.0 
   });
-  
   targetKey = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   // Initialize components for Routine "start"
@@ -1305,7 +1309,6 @@ function primeStimRoutineBegin(snapshot) {
     // update component parameters for each repeat
     primeAudio.setValue(`resources/audio/${prime_audio}`);
     primeAudio.setVolume(1.0);
-    primeText.setText(prime);
     primeKey.keys = undefined;
     primeKey.rt = undefined;
     _primeKey_allKeys = [];
@@ -1314,7 +1317,7 @@ function primeStimRoutineBegin(snapshot) {
     // keep track of which components have finished
     primeStimComponents = [];
     primeStimComponents.push(primeAudio);
-    primeStimComponents.push(primeText);
+    primeStimComponents.push(primeImage);
     primeStimComponents.push(primeKey);
     
     for (const thisComponent of primeStimComponents)
@@ -1346,13 +1349,13 @@ function primeStimRoutineEachFrame() {
       primeAudio.status = PsychoJS.Status.FINISHED;
     }
     
-    // *primeText* updates
-    if (t >= 0 && primeText.status === PsychoJS.Status.NOT_STARTED) {
+    // *primeImage* updates
+    if (t >= 0.0 && primeImage.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
-      primeText.tStart = t;  // (not accounting for frame time here)
-      primeText.frameNStart = frameN;  // exact frame index
+      primeImage.tStart = t;  // (not accounting for frame time here)
+      primeImage.frameNStart = frameN;  // exact frame index
       
-      primeText.setAutoDraw(true);
+      primeImage.setAutoDraw(true);
     }
     
     
@@ -1607,7 +1610,6 @@ function targetStimRoutineBegin(snapshot) {
     // update component parameters for each repeat
     targetAudio.setValue(`resources/audio/${target_audio}`);
     targetAudio.setVolume(1.0);
-    targetText.setText(target);
     targetKey.keys = undefined;
     targetKey.rt = undefined;
     _targetKey_allKeys = [];
@@ -1616,7 +1618,7 @@ function targetStimRoutineBegin(snapshot) {
     // keep track of which components have finished
     targetStimComponents = [];
     targetStimComponents.push(targetAudio);
-    targetStimComponents.push(targetText);
+    targetStimComponents.push(targetImage);
     targetStimComponents.push(targetKey);
     
     for (const thisComponent of targetStimComponents)
@@ -1648,13 +1650,13 @@ function targetStimRoutineEachFrame() {
       targetAudio.status = PsychoJS.Status.FINISHED;
     }
     
-    // *targetText* updates
-    if (t >= 0 && targetText.status === PsychoJS.Status.NOT_STARTED) {
+    // *targetImage* updates
+    if (t >= 0.0 && targetImage.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
-      targetText.tStart = t;  // (not accounting for frame time here)
-      targetText.frameNStart = frameN;  // exact frame index
+      targetImage.tStart = t;  // (not accounting for frame time here)
+      targetImage.frameNStart = frameN;  // exact frame index
       
-      targetText.setAutoDraw(true);
+      targetImage.setAutoDraw(true);
     }
     
     

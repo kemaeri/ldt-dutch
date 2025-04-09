@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on April 09, 2025, at 12:15
+    on April 09, 2025, at 12:29
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -17,7 +17,7 @@ from psychopy import prefs
 from psychopy import plugins
 plugins.activatePlugins()
 prefs.hardware['audioLib'] = 'ptb'
-prefs.hardware['audioLatencyMode'] = '3'
+prefs.hardware['audioLatencyMode'] = '4'
 from psychopy import sound, gui, visual, core, data, event, logging, clock, colors, layout, hardware
 from psychopy.tools import environmenttools
 from psychopy.constants import (NOT_STARTED, STARTED, PLAYING, PAUSED,
@@ -419,13 +419,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='primeAudio',    name='primeAudio'
     )
     primeAudio.setVolume(1.0)
-    primeText = visual.TextStim(win=win, name='primeText',
-        text='',
-        font='Arial',
-        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
-        languageStyle='LTR',
-        depth=-1.0);
+    primeImage = visual.ImageStim(
+        win=win,
+        name='primeImage', 
+        image='resources/volume_icon.png', mask=None, anchor='center',
+        ori=0.0, pos=(0, 0), draggable=False, size=(0.2, 0.2),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=-1.0)
     primeKey = keyboard.Keyboard(deviceName='primeKey')
     
     # --- Initialize components for Routine "feedback" ---
@@ -457,13 +458,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='targetAudio',    name='targetAudio'
     )
     targetAudio.setVolume(1.0)
-    targetText = visual.TextStim(win=win, name='targetText',
-        text='',
-        font='Arial',
-        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
-        languageStyle='LTR',
-        depth=-1.0);
+    targetImage = visual.ImageStim(
+        win=win,
+        name='targetImage', 
+        image='resources/volume_icon.png', mask=None, anchor='center',
+        ori=0.0, pos=(0, 0), draggable=False, size=(0.2, 0.2),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=-1.0)
     targetKey = keyboard.Keyboard(deviceName='targetKey')
     
     # --- Initialize components for Routine "feedback" ---
@@ -505,13 +507,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='primeAudio',    name='primeAudio'
     )
     primeAudio.setVolume(1.0)
-    primeText = visual.TextStim(win=win, name='primeText',
-        text='',
-        font='Arial',
-        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
-        languageStyle='LTR',
-        depth=-1.0);
+    primeImage = visual.ImageStim(
+        win=win,
+        name='primeImage', 
+        image='resources/volume_icon.png', mask=None, anchor='center',
+        ori=0.0, pos=(0, 0), draggable=False, size=(0.2, 0.2),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=-1.0)
     primeKey = keyboard.Keyboard(deviceName='primeKey')
     
     # --- Initialize components for Routine "fix" ---
@@ -532,13 +535,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='targetAudio',    name='targetAudio'
     )
     targetAudio.setVolume(1.0)
-    targetText = visual.TextStim(win=win, name='targetText',
-        text='',
-        font='Arial',
-        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
-        languageStyle='LTR',
-        depth=-1.0);
+    targetImage = visual.ImageStim(
+        win=win,
+        name='targetImage', 
+        image='resources/volume_icon.png', mask=None, anchor='center',
+        ori=0.0, pos=(0, 0), draggable=False, size=(0.2, 0.2),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=-1.0)
     targetKey = keyboard.Keyboard(deviceName='targetKey')
     
     # --- Initialize components for Routine "pause" ---
@@ -889,7 +893,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine primeStim
         primeStim = data.Routine(
             name='primeStim',
-            components=[primeAudio, primeText, primeKey],
+            components=[primeAudio, primeImage, primeKey],
         )
         primeStim.status = NOT_STARTED
         continueRoutine = True
@@ -897,7 +901,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         primeAudio.setSound('resources/audio/%s'%(prime_audio), hamming=True)
         primeAudio.setVolume(1.0, log=False)
         primeAudio.seek(0)
-        primeText.setText(prime)
         # create starting attributes for primeKey
         primeKey.keys = []
         primeKey.rt = []
@@ -962,23 +965,23 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     primeAudio.status = FINISHED
                     primeAudio.stop()
             
-            # *primeText* updates
+            # *primeImage* updates
             
-            # if primeText is starting this frame...
-            if primeText.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+            # if primeImage is starting this frame...
+            if primeImage.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
                 # keep track of start time/frame for later
-                primeText.frameNStart = frameN  # exact frame index
-                primeText.tStart = t  # local t and not account for scr refresh
-                primeText.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(primeText, 'tStartRefresh')  # time at next scr refresh
+                primeImage.frameNStart = frameN  # exact frame index
+                primeImage.tStart = t  # local t and not account for scr refresh
+                primeImage.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(primeImage, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'primeText.started')
+                thisExp.timestampOnFlip(win, 'primeImage.started')
                 # update status
-                primeText.status = STARTED
-                primeText.setAutoDraw(True)
+                primeImage.status = STARTED
+                primeImage.setAutoDraw(True)
             
-            # if primeText is active this frame...
-            if primeText.status == STARTED:
+            # if primeImage is active this frame...
+            if primeImage.status == STARTED:
                 # update params
                 pass
             
@@ -1358,7 +1361,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine targetStim
         targetStim = data.Routine(
             name='targetStim',
-            components=[targetAudio, targetText, targetKey],
+            components=[targetAudio, targetImage, targetKey],
         )
         targetStim.status = NOT_STARTED
         continueRoutine = True
@@ -1366,7 +1369,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         targetAudio.setSound('resources/audio/%s'%(target_audio), hamming=True)
         targetAudio.setVolume(1.0, log=False)
         targetAudio.seek(0)
-        targetText.setText(target)
         # create starting attributes for targetKey
         targetKey.keys = []
         targetKey.rt = []
@@ -1431,23 +1433,23 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     targetAudio.status = FINISHED
                     targetAudio.stop()
             
-            # *targetText* updates
+            # *targetImage* updates
             
-            # if targetText is starting this frame...
-            if targetText.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+            # if targetImage is starting this frame...
+            if targetImage.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
                 # keep track of start time/frame for later
-                targetText.frameNStart = frameN  # exact frame index
-                targetText.tStart = t  # local t and not account for scr refresh
-                targetText.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(targetText, 'tStartRefresh')  # time at next scr refresh
+                targetImage.frameNStart = frameN  # exact frame index
+                targetImage.tStart = t  # local t and not account for scr refresh
+                targetImage.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(targetImage, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'targetText.started')
+                thisExp.timestampOnFlip(win, 'targetImage.started')
                 # update status
-                targetText.status = STARTED
-                targetText.setAutoDraw(True)
+                targetImage.status = STARTED
+                targetImage.setAutoDraw(True)
             
-            # if targetText is active this frame...
-            if targetText.status == STARTED:
+            # if targetImage is active this frame...
+            if targetImage.status == STARTED:
                 # update params
                 pass
             
@@ -2004,7 +2006,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine primeStim
         primeStim = data.Routine(
             name='primeStim',
-            components=[primeAudio, primeText, primeKey],
+            components=[primeAudio, primeImage, primeKey],
         )
         primeStim.status = NOT_STARTED
         continueRoutine = True
@@ -2012,7 +2014,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         primeAudio.setSound('resources/audio/%s'%(prime_audio), hamming=True)
         primeAudio.setVolume(1.0, log=False)
         primeAudio.seek(0)
-        primeText.setText(prime)
         # create starting attributes for primeKey
         primeKey.keys = []
         primeKey.rt = []
@@ -2077,23 +2078,23 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     primeAudio.status = FINISHED
                     primeAudio.stop()
             
-            # *primeText* updates
+            # *primeImage* updates
             
-            # if primeText is starting this frame...
-            if primeText.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+            # if primeImage is starting this frame...
+            if primeImage.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
                 # keep track of start time/frame for later
-                primeText.frameNStart = frameN  # exact frame index
-                primeText.tStart = t  # local t and not account for scr refresh
-                primeText.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(primeText, 'tStartRefresh')  # time at next scr refresh
+                primeImage.frameNStart = frameN  # exact frame index
+                primeImage.tStart = t  # local t and not account for scr refresh
+                primeImage.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(primeImage, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'primeText.started')
+                thisExp.timestampOnFlip(win, 'primeImage.started')
                 # update status
-                primeText.status = STARTED
-                primeText.setAutoDraw(True)
+                primeImage.status = STARTED
+                primeImage.setAutoDraw(True)
             
-            # if primeText is active this frame...
-            if primeText.status == STARTED:
+            # if primeImage is active this frame...
+            if primeImage.status == STARTED:
                 # update params
                 pass
             
@@ -2312,7 +2313,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine targetStim
         targetStim = data.Routine(
             name='targetStim',
-            components=[targetAudio, targetText, targetKey],
+            components=[targetAudio, targetImage, targetKey],
         )
         targetStim.status = NOT_STARTED
         continueRoutine = True
@@ -2320,7 +2321,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         targetAudio.setSound('resources/audio/%s'%(target_audio), hamming=True)
         targetAudio.setVolume(1.0, log=False)
         targetAudio.seek(0)
-        targetText.setText(target)
         # create starting attributes for targetKey
         targetKey.keys = []
         targetKey.rt = []
@@ -2385,23 +2385,23 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     targetAudio.status = FINISHED
                     targetAudio.stop()
             
-            # *targetText* updates
+            # *targetImage* updates
             
-            # if targetText is starting this frame...
-            if targetText.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+            # if targetImage is starting this frame...
+            if targetImage.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
                 # keep track of start time/frame for later
-                targetText.frameNStart = frameN  # exact frame index
-                targetText.tStart = t  # local t and not account for scr refresh
-                targetText.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(targetText, 'tStartRefresh')  # time at next scr refresh
+                targetImage.frameNStart = frameN  # exact frame index
+                targetImage.tStart = t  # local t and not account for scr refresh
+                targetImage.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(targetImage, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'targetText.started')
+                thisExp.timestampOnFlip(win, 'targetImage.started')
                 # update status
-                targetText.status = STARTED
-                targetText.setAutoDraw(True)
+                targetImage.status = STARTED
+                targetImage.setAutoDraw(True)
             
-            # if targetText is active this frame...
-            if targetText.status == STARTED:
+            # if targetImage is active this frame...
+            if targetImage.status == STARTED:
                 # update params
                 pass
             
