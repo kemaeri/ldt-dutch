@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on April 08, 2025, at 19:06
+    on April 09, 2025, at 12:15
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -126,7 +126,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\medej\\Desktop\\EXP Neurolinguistics\\ldt-dutch_lastrun.py',
+        originPath='C:\\Users\\medej\\Documents\\EXP Neurolinguistics\\ldt-dutch_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -938,7 +938,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # *primeAudio* updates
             
             # if primeAudio is starting this frame...
-            if primeAudio.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            if primeAudio.status == NOT_STARTED and tThisFlip >= 0.1-frameTolerance:
                 # keep track of start time/frame for later
                 primeAudio.frameNStart = frameN  # exact frame index
                 primeAudio.tStart = t  # local t and not account for scr refresh
@@ -1407,7 +1407,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # *targetAudio* updates
             
             # if targetAudio is starting this frame...
-            if targetAudio.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            if targetAudio.status == NOT_STARTED and tThisFlip >= 0.1-frameTolerance:
                 # keep track of start time/frame for later
                 targetAudio.frameNStart = frameN  # exact frame index
                 targetAudio.tStart = t  # local t and not account for scr refresh
@@ -2053,7 +2053,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # *primeAudio* updates
             
             # if primeAudio is starting this frame...
-            if primeAudio.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            if primeAudio.status == NOT_STARTED and tThisFlip >= 0.1-frameTolerance:
                 # keep track of start time/frame for later
                 primeAudio.frameNStart = frameN  # exact frame index
                 primeAudio.tStart = t  # local t and not account for scr refresh
@@ -2361,7 +2361,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # *targetAudio* updates
             
             # if targetAudio is starting this frame...
-            if targetAudio.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            if targetAudio.status == NOT_STARTED and tThisFlip >= 0.1-frameTolerance:
                 # keep track of start time/frame for later
                 targetAudio.frameNStart = frameN  # exact frame index
                 targetAudio.tStart = t  # local t and not account for scr refresh
