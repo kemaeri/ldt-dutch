@@ -2,7 +2,7 @@ import os
 from pydub import AudioSegment
 
 # Path to the 'audio' subdirectory
-audio_dir = "audio"
+audio_dir = "list3audio"
 
 # Loop through each file in the directory
 for root, _, files in os.walk(audio_dir):
