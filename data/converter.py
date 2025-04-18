@@ -5,17 +5,15 @@ import glob
 def convertFile(json, csv):
   df = pd.read_json(json)
 
-  df.to_csv(csv, index = False)
+  # Ensure the 'csv' folder exists within the function
+  output_folder = 'csv'
+  if not os.path.exists(output_folder):
+    os.makedirs(output_folder)
 
-  df = pd.read_csv(csv,usecols=["list_no", "participant","date", "stimType", "stimID", "prime", "prime_lex", "prime_cond", "primeKey.corr", "primeKey.rt", "target", "target_lex", "target_cond", "targetKey.corr", "targetKey.rt"])
+  # Filter and reorder columns directly without saving intermediate CSV
+  df = df[["list_no", "participant", "date", "stimType", "stimID", "prime", "prime_lex", "prime_cond", "primeKey.corr", "primeKey.rt", "target", "target_lex", "target_cond", "targetKey.corr", "targetKey.rt"]]
 
-  df = df[["list_no", "participant","date", "stimType", "stimID", "prime", "prime_lex", "prime_cond", "primeKey.corr", "primeKey.rt", "target", "target_lex", "target_cond", "targetKey.corr", "targetKey.rt"]]
-
-  df.to_csv(csv, index=False)
-
-dataFiles = glob.glob('**\*.json',recursive=True)
-
-for file in dataFiles:
-    filename = file.split("\\")[1].split("_pr")[0] + ".csv"
-    print(filename)
-    convertFile(file,filename)
+  # Save the final CSV to the 'csv' folder
+  csv_filename = os.path.splitext(csv)[0] + '.csv'
+  csv_path = os.path.join(output_folder, csv_filename)
+  df.to_csv(csv_path, index=False)
