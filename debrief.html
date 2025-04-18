@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debriefing</title>
+    <style>
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f4f4f4;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-bottom: 50px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav img {
+            height: 40px;
+        }
+
+        nav p {
+            margin-left: 15px;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: #dc002d;
+            color: white;
+            padding: 7px 12px;
+            border-radius: 20px;
+            display: inline-block; /* Ensures consistent spacing */
+        }
+
+        body {
+            padding: 50px;
+            padding-left: max(50px, 10%);
+            padding-right: max(50px, 10%);
+            max-width: 800px;
+            margin: 0 auto;
+            font-family: Georgia, serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        button{
+            display: block; 
+            margin: 20px auto; 
+            margin-top: 50px;
+            padding: 10px 20px; 
+            background-color: #dc002d; 
+            color: white; 
+            border: none; 
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .example {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-left: 4px solid #2a4d69;
+            margin: 10px 0;
+            font-family: monospace;
+            white-space:pre
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+</head>
+<body>
+    <nav>
+        <img src="https://www.rug.nl/_definition/shared/images/logo--en.svg" alt="University of Groningen Logo" style="height: 40px; vertical-align: middle; margin-right: 10px;">
+        <p class="debriefing-text">Debriefing</p>
+    </nav>
+    <div id="content">
+        <h1>Bedankt voor uw deelname!</h1>
+        <p>Het onderzoek is nu afgerond en uw antwoorden worden volledig anoniem opgeslagen. Om de resultaten van het experiment niet te beïnvloeden, hebben we u van tevoren niet alles verteld. Nu het experiment voorbij is, leggen we graag uit waar het precies om ging.</p>
+
+
+        <h2>Wat was het doel van het onderzoek?</h2>
+        <p>Het experiment draaide om <strong>meervoudsvormen in het Nederlands</strong>, zoals:</p>
+        <ul>
+          <li><em>tafels</em> (tafel + <strong>-s</strong>)</li>
+          <li><em>stoelen</em> (stoel + <strong>-en</strong>)</li>
+        </ul>
+        <p>
+          De achtervoegsels <em>-s</em> en <em>-en</em> geven aan dat iets in het meervoud staat. Zulke betekenisvolle onderdelen van woorden noemen we in de taalkunde <strong>morfemen</strong>.
+          We wilden met dit onderzoek beter begrijpen hoe deze meervoudsmorfemen in de hersenen zijn opgeslagen.
+        </p>
+      
+        <h2>Wat deed u precies tijdens het experiment?</h2>
+        <p>
+          U kreeg verschillende woorden te zien en moest aangeven of het echte of nepwoorden waren.
+          Zonder dat u het wist, werden de woorden in <strong>paren</strong> getoond. Wat we wilden weten, is of het eerste woord invloed had op uw reactiesnelheid bij het tweede woord.
+        </p>
+      
+        <div class="example">ber<strong style="color:green;">en</strong> → hoed<strong style="color:green;">en</strong><br>beer  → hoed<strong style="color:#dc002d;">en</strong> </div>
+      
+        <p>
+          We verwachten dat u sneller reageerde op <em>hoeden</em> als u daarvoor <em>beren</em> zag, dan als u eerst <em>beer</em> zag.
+          Waarom? Omdat het meervoudsmorfeem <strong>-en</strong> al was geactiveerd toen u <em>beren</em> las. Daardoor kon u <em>hoeden</em> sneller verwerken.
+        </p>
+        <p>
+          Dit zou betekenen dat uw hersenen <em>hoeden</em> niet als één geheel opslaan, maar als twee delen: <em>hoed</em> + <strong>-en</strong>.
+        </p>
+      
+        <h2>Waarom is dit belangrijk?</h2>
+        <p>
+          Dit onderzoek helpt ons te begrijpen hoe taal wordt verwerkt in het brein.
+          Dat is niet alleen interessant voor taalkundigen, maar ook belangrijk voor bijvoorbeeld onderzoek naar <strong>taalstoornissen</strong>, waarbij morfemen vaak niet goed worden verwerkt.
+        </p>
+        
+        <h2>Contact</h2>
+        <p>
+            Heeft u nog vragen of opmerkingen?
+            Neem gerust contact op met de student-onderzoekers (Amber Marinus, <a href="mailto:a.j.marinus@student.rug.nl">a.j.marinus@student.rug.nl</a>, Marieke de Jong, <a href="mailto:m.e.de.jong.6@student.rug.nl">m.e.de.jong.6@student.rug.nl</a>) of de hoofdonderzoeker (dr. Srdjan Popov, <a href="mailto:s.popov@rug.nl">s.popov@rug.nl</a>).
+        </p>
+
+    </div>
+    <button id="close-tab-button">
+        Sluit tabblad
+    </button>
+    <script>
+        // Reference the button element
+        const closeButton = document.getElementById('close-tab-button');
+
+        // Function to close the tab using the button
+        closeButton.addEventListener('click', () => {
+            window.open("", "_blank", "");
+            window.close();
+        });
+
+        // Add hover effect for the button
+        closeButton.addEventListener('mouseover', () => {
+            closeButton.style.backgroundColor = '#a90023';
+        });
+
+        closeButton.addEventListener('mouseout', () => {
+            closeButton.style.backgroundColor = '#dc002d';
+        });
+    </script>
+</body>
+</html>
