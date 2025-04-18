@@ -764,7 +764,8 @@ async function updateInfo() {
 
   // add info from the URL:
   util.addInfoFromUrl(expInfo);
-  
+  psychoJS.setRedirectUrls('https://kemaeri.github.io/ldt-dutch/debrief', '');
+
 
   
   psychoJS.experiment.dataFileName = (("." + "/") + `data/participant_${expInfo["participant"]}_${expName}_${expInfo["date"]}`);
@@ -2177,7 +2178,7 @@ function endRoutineBegin(snapshot) {
           }),
     }).then(response => response.json()).then(data => {
         console.log(data);
-        quitPsychoJS();
+        quitPsychoJS("Bedankt voor het meedoen!",true);
     });
     
     psychoJS.experiment.addData('end.started', globalClock.getTime());
