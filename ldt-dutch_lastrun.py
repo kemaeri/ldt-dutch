@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on April 18, 2025, at 16:13
+    on April 25, 2025, at 14:55
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -393,7 +393,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "welcome" ---
     welcomeText = visual.TextStim(win=win, name='welcomeText',
-        text="Welkom bij het woordherkenningsexperiment!\n\nOp het scherm verschijnen straks woorden. Sommige zijn echte Nederlandse woorden en sommige zijn nepwoorden. Het doel is om te bepalen of het getoonde woord echt is of nep.\n\nDruk op 'j' als het woord echt is.\nDruk op 'f' als het woord nep is.\n\nWe gaan eerst even oefenen.\n\nDruk op de spatiebalk om verder te gaan.",
+        text='Welkom bij het woordherkenningsexperiment!\n\nOp het scherm verschijnen straks woorden. Sommige zijn echte Nederlandse woorden en sommige zijn nepwoorden. Het doel is om te bepalen of het getoonde woord echt is of nep.\n\nDruk op [ J ] als het woord echt is.\nDruk op [ F ] als het woord nep is.\n\nWe gaan eerst even oefenen.\n\nDruk op de [ SPATIEBALK ] om verder te gaan.',
         font='Arial',
         units='norm', pos=(0, 0), draggable=False, height=0.08, wrapWidth=1.5, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -427,6 +427,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
+    primeText = visual.TextStim(win=win, name='primeText',
+        text='[ F ] nep                   [ J ] echt',
+        font='Arial',
+        pos=(0, -0.3), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-2.0);
     primeKey = keyboard.Keyboard(deviceName='primeKey')
     
     # --- Initialize components for Routine "feedback" ---
@@ -466,6 +473,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
+    targetText = visual.TextStim(win=win, name='targetText',
+        text='[ F ] nep                   [ J ] echt',
+        font='Arial',
+        pos=(0, -0.3), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-2.0);
     targetKey = keyboard.Keyboard(deviceName='targetKey')
     
     # --- Initialize components for Routine "feedback" ---
@@ -481,7 +495,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "start" ---
     startText = visual.TextStim(win=win, name='startText',
-        text='Goed gedaan!\n\nWe gaan nu verder met het echte experiment. Het experiment is opgedeeld in 8 blokken. Tussen de blokken is er steeds een pauzemoment.\n\nVeel succes!\n\nDruk op de spatiebalk om te beginnen',
+        text='***** EINDE OEFENWOORDEN *****\n\nWe gaan nu verder met het echte experiment. Het experiment is opgedeeld in meerdere blokken. Tussen de blokken is er steeds een moment waarop je kunt pauzeren.\n\nVeel succes!\n\nDruk op de [ SPATIEBALK ] om te beginnen',
         font='Arial',
         units='norm', pos=(0, 0), draggable=False, height=0.1, wrapWidth=1.8, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -515,6 +529,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
+    primeText = visual.TextStim(win=win, name='primeText',
+        text='[ F ] nep                   [ J ] echt',
+        font='Arial',
+        pos=(0, -0.3), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-2.0);
     primeKey = keyboard.Keyboard(deviceName='primeKey')
     
     # --- Initialize components for Routine "fix" ---
@@ -543,6 +564,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
+    targetText = visual.TextStim(win=win, name='targetText',
+        text='[ F ] nep                   [ J ] echt',
+        font='Arial',
+        pos=(0, -0.3), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-2.0);
     targetKey = keyboard.Keyboard(deviceName='targetKey')
     
     # --- Initialize components for Routine "pause" ---
@@ -551,7 +579,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         return [*range(value, length*value+1, value)]
         
     breakN = 0    
-    breakOn = multiples(36,8)
+    breakOn = multiples(24,12)
     breakText = visual.TextStim(win=win, name='breakText',
         text=None,
         font='Arial',
@@ -563,7 +591,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "end" ---
     endText = visual.TextStim(win=win, name='endText',
-        text='Einde van het experiment.\n\nEen moment geduld a.u.b.\nDe antwoorden worden opgeslagen...',
+        text='***** EINDE *****\n\nEen moment geduld a.u.b.\nDe antwoorden worden opgeslagen...',
         font='Arial',
         units='norm', pos=(0, 0), draggable=False, height=0.1, wrapWidth=1.8, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -893,7 +921,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine primeStim
         primeStim = data.Routine(
             name='primeStim',
-            components=[primeAudio, primeImage, primeKey],
+            components=[primeAudio, primeImage, primeText, primeKey],
         )
         primeStim.status = NOT_STARTED
         continueRoutine = True
@@ -982,6 +1010,26 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
             # if primeImage is active this frame...
             if primeImage.status == STARTED:
+                # update params
+                pass
+            
+            # *primeText* updates
+            
+            # if primeText is starting this frame...
+            if primeText.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                primeText.frameNStart = frameN  # exact frame index
+                primeText.tStart = t  # local t and not account for scr refresh
+                primeText.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(primeText, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'primeText.started')
+                # update status
+                primeText.status = STARTED
+                primeText.setAutoDraw(True)
+            
+            # if primeText is active this frame...
+            if primeText.status == STARTED:
                 # update params
                 pass
             
@@ -1361,7 +1409,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine targetStim
         targetStim = data.Routine(
             name='targetStim',
-            components=[targetAudio, targetImage, targetKey],
+            components=[targetAudio, targetImage, targetText, targetKey],
         )
         targetStim.status = NOT_STARTED
         continueRoutine = True
@@ -1450,6 +1498,26 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
             # if targetImage is active this frame...
             if targetImage.status == STARTED:
+                # update params
+                pass
+            
+            # *targetText* updates
+            
+            # if targetText is starting this frame...
+            if targetText.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                targetText.frameNStart = frameN  # exact frame index
+                targetText.tStart = t  # local t and not account for scr refresh
+                targetText.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(targetText, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'targetText.started')
+                # update status
+                targetText.status = STARTED
+                targetText.setAutoDraw(True)
+            
+            # if targetText is active this frame...
+            if targetText.status == STARTED:
                 # update params
                 pass
             
@@ -2006,7 +2074,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine primeStim
         primeStim = data.Routine(
             name='primeStim',
-            components=[primeAudio, primeImage, primeKey],
+            components=[primeAudio, primeImage, primeText, primeKey],
         )
         primeStim.status = NOT_STARTED
         continueRoutine = True
@@ -2095,6 +2163,26 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
             # if primeImage is active this frame...
             if primeImage.status == STARTED:
+                # update params
+                pass
+            
+            # *primeText* updates
+            
+            # if primeText is starting this frame...
+            if primeText.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                primeText.frameNStart = frameN  # exact frame index
+                primeText.tStart = t  # local t and not account for scr refresh
+                primeText.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(primeText, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'primeText.started')
+                # update status
+                primeText.status = STARTED
+                primeText.setAutoDraw(True)
+            
+            # if primeText is active this frame...
+            if primeText.status == STARTED:
                 # update params
                 pass
             
@@ -2313,7 +2401,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine targetStim
         targetStim = data.Routine(
             name='targetStim',
-            components=[targetAudio, targetImage, targetKey],
+            components=[targetAudio, targetImage, targetText, targetKey],
         )
         targetStim.status = NOT_STARTED
         continueRoutine = True
@@ -2402,6 +2490,26 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
             # if targetImage is active this frame...
             if targetImage.status == STARTED:
+                # update params
+                pass
+            
+            # *targetText* updates
+            
+            # if targetText is starting this frame...
+            if targetText.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                targetText.frameNStart = frameN  # exact frame index
+                targetText.tStart = t  # local t and not account for scr refresh
+                targetText.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(targetText, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'targetText.started')
+                # update status
+                targetText.status = STARTED
+                targetText.setAutoDraw(True)
+            
+            # if targetText is active this frame...
+            if targetText.status == STARTED:
                 # update params
                 pass
             
@@ -2509,7 +2617,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             continueRoutine = True
             breakText.setText("")
             breakN = breakN + 1
-            text = 'Dit was blok %s van de %s.\n\n Neem even pauze en druk dan op de spatiebalk om verder te gaan.'%(breakN, len(breakOn))
+            text = 'Dit was blok %s van de %s.\n\n Druk op de [ SPATIEBALK ] om verder te gaan.'%(breakN, len(breakOn))
             breakText.setText(text)
         else:
             continueRoutine = False

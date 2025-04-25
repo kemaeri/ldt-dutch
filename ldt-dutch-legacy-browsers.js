@@ -784,6 +784,7 @@ var fix_rand;
 var primeStimClock;
 var primeAudio;
 var primeImage;
+var primeText;
 var primeKey;
 var feedbackClock;
 var primed;
@@ -791,6 +792,7 @@ var feedbackText;
 var targetStimClock;
 var targetAudio;
 var targetImage;
+var targetText;
 var targetKey;
 var startClock;
 var startText;
@@ -810,7 +812,7 @@ async function experimentInit() {
   welcomeText = new visual.TextStim({
     win: psychoJS.window,
     name: 'welcomeText',
-    text: "Welkom bij het woordherkenningsexperiment!\n\nOp het scherm verschijnen straks woorden. Sommige zijn echte Nederlandse woorden en sommige zijn nepwoorden. Het doel is om te bepalen of het getoonde woord echt is of nep.\n\nDruk op 'j' als het woord echt is.\nDruk op 'f' als het woord nep is.\n\nWe gaan eerst even oefenen.\n\nDruk op de spatiebalk om verder te gaan.",
+    text: '***** WOORDHERKENNINGSEXPERIMENT *****\n\nOp het scherm verschijnen straks woorden. Sommige zijn echte Nederlandse woorden en sommige zijn nepwoorden. Het doel is om te bepalen of het getoonde woord echt is of nep.\n\nDruk op [J] als het woord echt is.\nDruk op [F] als het woord nep is.\n\nWe gaan eerst even oefenen.\n\nDruk op de [SPATIEBALK] om verder te gaan.',
     font: 'Arial',
     units: 'norm', 
     pos: [0, 0], draggable: false, height: 0.08,  wrapWidth: 1.5, ori: 0.0,
@@ -856,6 +858,18 @@ async function experimentInit() {
     flipHoriz : false, flipVert : false,
     texRes : 128.0, interpolate : true, depth : -1.0 
   });
+  primeText = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'primeText',
+    text: '[ F ] nep                   [ J ] echt',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, (- 0.3)], draggable: false, height: 0.05,  wrapWidth: undefined, ori: 0.0,
+    languageStyle: 'LTR',
+    color: new util.Color('white'),  opacity: undefined,
+    depth: -2.0 
+  });
+  
   primeKey = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   // Initialize components for Routine "feedback"
@@ -896,6 +910,18 @@ async function experimentInit() {
     flipHoriz : false, flipVert : false,
     texRes : 128.0, interpolate : true, depth : -1.0 
   });
+  targetText = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'targetText',
+    text: '[ F ] nep                   [ J ] echt',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, (- 0.3)], draggable: false, height: 0.05,  wrapWidth: undefined, ori: 0.0,
+    languageStyle: 'LTR',
+    color: new util.Color('white'),  opacity: undefined,
+    depth: -2.0 
+  });
+  
   targetKey = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   // Initialize components for Routine "start"
@@ -903,7 +929,7 @@ async function experimentInit() {
   startText = new visual.TextStim({
     win: psychoJS.window,
     name: 'startText',
-    text: 'Goed gedaan!\n\nWe gaan nu verder met het echte experiment. Het experiment is opgedeeld in 8 blokken. Tussen de blokken is er steeds een pauzemoment.\n\nVeel succes!\n\nDruk op de spatiebalk om te beginnen',
+    text: '***** EINDE OEFENWOORDEN *****\n\nWe gaan nu verder met het echte experiment. Het experiment is opgedeeld in meerdere blokken. Tussen de blokken is er steeds een moment waarop je kunt pauzeren.\n\nVeel succes!\n\nDruk op de [SPATIEBALK] om te beginnen',
     font: 'Arial',
     units: 'norm', 
     pos: [0, 0], draggable: false, height: 0.1,  wrapWidth: 1.8, ori: 0.0,
@@ -921,7 +947,7 @@ async function experimentInit() {
       return [...util.range(value, ((length * value) + 1), value)];
   }
   breakN = 0;
-  breakOn = multiples(36, 8);
+  breakOn = multiples(24, 12);
   
   breakText = new visual.TextStim({
     win: psychoJS.window,
@@ -942,7 +968,7 @@ async function experimentInit() {
   endText = new visual.TextStim({
     win: psychoJS.window,
     name: 'endText',
-    text: 'Einde van het experiment.\n\nEen moment geduld a.u.b.\nDe antwoorden worden opgeslagen...',
+    text: '***** EINDE *****\n\nEen moment geduld a.u.b.\nDe antwoorden worden opgeslagen...',
     font: 'Arial',
     units: 'norm', 
     pos: [0, 0], draggable: false, height: 0.1,  wrapWidth: 1.8, ori: 0.0,
@@ -1387,6 +1413,7 @@ function primeStimRoutineBegin(snapshot) {
     primeStimComponents = [];
     primeStimComponents.push(primeAudio);
     primeStimComponents.push(primeImage);
+    primeStimComponents.push(primeText);
     primeStimComponents.push(primeKey);
     
     primeStimComponents.forEach( function(thisComponent) {
@@ -1426,6 +1453,16 @@ function primeStimRoutineEachFrame() {
       primeImage.frameNStart = frameN;  // exact frame index
       
       primeImage.setAutoDraw(true);
+    }
+    
+    
+    // *primeText* updates
+    if (t >= 0.0 && primeText.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      primeText.tStart = t;  // (not accounting for frame time here)
+      primeText.frameNStart = frameN;  // exact frame index
+      
+      primeText.setAutoDraw(true);
     }
     
     
@@ -1690,6 +1727,7 @@ function targetStimRoutineBegin(snapshot) {
     targetStimComponents = [];
     targetStimComponents.push(targetAudio);
     targetStimComponents.push(targetImage);
+    targetStimComponents.push(targetText);
     targetStimComponents.push(targetKey);
     
     targetStimComponents.forEach( function(thisComponent) {
@@ -1729,6 +1767,16 @@ function targetStimRoutineEachFrame() {
       targetImage.frameNStart = frameN;  // exact frame index
       
       targetImage.setAutoDraw(true);
+    }
+    
+    
+    // *targetText* updates
+    if (t >= 0.0 && targetText.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      targetText.tStart = t;  // (not accounting for frame time here)
+      targetText.frameNStart = frameN;  // exact frame index
+      
+      targetText.setAutoDraw(true);
     }
     
     
@@ -2013,7 +2061,7 @@ function pauseRoutineBegin(snapshot) {
         breakN = (breakN + 1);
         text = `Dit was blok ${breakN} van de ${breakOn.length}
     
-        Neem even pauze en druk dan op de spatiebalk om verder te gaan.`;
+        Druk op de [ SPATIEBALK ] om verder te gaan.`;
         breakText.setText(text);
     } else {
         continueRoutine = false;
@@ -2178,7 +2226,7 @@ function endRoutineBegin(snapshot) {
           }),
     }).then(response => response.json()).then(data => {
         console.log(data);
-        quitPsychoJS("Bedankt voor het meedoen!",true);
+        quitPsychoJS("De antwoorden zijn opgeslagen. Bedankt voor het meedoen!",true);
     });
     
     psychoJS.experiment.addData('end.started', globalClock.getTime());
