@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on April 25, 2025, at 14:55
+    on May 05, 2025, at 20:16
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -126,7 +126,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\medej\\Documents\\EXP Neurolinguistics\\ldt-dutch_lastrun.py',
+        originPath='C:\\Users\\marie\\Desktop\\Experiment Neurolinguïstiek\\ldt-dutch_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -393,7 +393,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "welcome" ---
     welcomeText = visual.TextStim(win=win, name='welcomeText',
-        text='Welkom bij het woordherkenningsexperiment!\n\nOp het scherm verschijnen straks woorden. Sommige zijn echte Nederlandse woorden en sommige zijn nepwoorden. Het doel is om te bepalen of het getoonde woord echt is of nep.\n\nDruk op [ J ] als het woord echt is.\nDruk op [ F ] als het woord nep is.\n\nWe gaan eerst even oefenen.\n\nDruk op de [ SPATIEBALK ] om verder te gaan.',
+        text='***** WOORDHERKENNINGSEXPERIMENT *****\n\nOp het scherm verschijnen straks woorden. Sommige zijn echte Nederlandse woorden en sommige zijn nepwoorden. Het doel is om te bepalen of het getoonde woord echt is of nep.\n\nDruk op [J] als het woord echt is.\nDruk op [F] als het woord nep is.\n\nWe gaan eerst even oefenen.\n\nDruk op de [SPATIEBALK] om verder te gaan.',
         font='Arial',
         units='norm', pos=(0, 0), draggable=False, height=0.08, wrapWidth=1.5, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -495,7 +495,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "start" ---
     startText = visual.TextStim(win=win, name='startText',
-        text='***** EINDE OEFENWOORDEN *****\n\nWe gaan nu verder met het echte experiment. Het experiment is opgedeeld in meerdere blokken. Tussen de blokken is er steeds een moment waarop je kunt pauzeren.\n\nVeel succes!\n\nDruk op de [ SPATIEBALK ] om te beginnen',
+        text='***** EINDE OEFENWOORDEN *****\n\nWe gaan nu verder met het echte experiment. Ga bij alle keuzes uit van het standaard Nederlands. Dialectwoorden zijn buiten beschouwing gelaten.\n\nHet experiment is opgedeeld in meerdere blokken. Tussen de blokken is er steeds een moment waarop je kunt pauzeren. \n\nWerk zo SNEL en zo GOED mogelijk. \n\nVeel succes!\n\nDruk op de [SPATIEBALK] om te beginnen',
         font='Arial',
         units='norm', pos=(0, 0), draggable=False, height=0.1, wrapWidth=1.8, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 

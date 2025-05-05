@@ -929,7 +929,7 @@ async function experimentInit() {
   startText = new visual.TextStim({
     win: psychoJS.window,
     name: 'startText',
-    text: '***** EINDE OEFENWOORDEN *****\n\nWe gaan nu verder met het echte experiment. Het experiment is opgedeeld in meerdere blokken. Tussen de blokken is er steeds een moment waarop je kunt pauzeren.\n\nVeel succes!\n\nDruk op de [SPATIEBALK] om te beginnen',
+    text: '***** EINDE OEFENWOORDEN *****\n\nWe gaan nu verder met het echte experiment. Ga bij alle keuzes uit van het standaard Nederlands. Dialectwoorden zijn buiten beschouwing gelaten.\n\nHet experiment is opgedeeld in meerdere blokken. Tussen de blokken is er steeds een moment waarop je kunt pauzeren. \n\nWerk zo SNEL en zo GOED mogelijk. \n\nVeel succes!\n\nDruk op de [SPATIEBALK] om te beginnen',
     font: 'Arial',
     units: 'norm', 
     pos: [0, 0], draggable: false, height: 0.1,  wrapWidth: 1.8, ori: 0.0,
